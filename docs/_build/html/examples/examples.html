@@ -1,0 +1,497 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Examples &mdash; DEBrowser 1.1.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="DEBrowser 1.1.10 documentation" href="../index.html"/>
+        <link rel="prev" title="DEBrowser Additions" href="../future/future.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DEBrowser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quickstart/quickstart.html">Quick-start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/local.html">Local Install Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deseq/deseq.html">DE Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../heatmap/heatmap.html">Heatmaps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/modules.html">DEBrowser Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../future/future.html">DEBrowser Additions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#qc-plots-without-batch-effect-correction">QC plots without Batch Effect Correction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#qc-plots-after-batch-effect-correction">QC plots after Batch Effect Correction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-differential-expression-plots">The Differential Expression Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#go-term-plots">GO Term Plots</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DEBrowser</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Examples</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/examples/examples.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<p>This guide is walkthrough for the preparation of figures which is used in DEBrowser paper. PCA, Heatmap, All2All will be plotted as an example for QC plots. Next, differential expression analysis will be conducted and their results will be visualized with Main plots such as <strong>Scatter</strong>, <strong>Volcano</strong> and <strong>MA</strong>. More detailed analysis will be covered by using simultaneously created Heatmap and KEGG pathway on the selected portion of the data.</p>
+<div class="section" id="qc-plots-without-batch-effect-correction">
+<h2>QC plots without Batch Effect Correction<a class="headerlink" href="#qc-plots-without-batch-effect-correction" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
+<li><strong>Upload Data:</strong> To begin the analysis, you need to load Demo Data by clicking <strong>Load Demo (Donnard et al)!</strong> button. Then click on <strong>Filter</strong> button to start <strong>Low Count Filtering</strong>.</li>
+<li><strong>Low Count Filtering:</strong> Filtering method is selected as <strong>Max</strong> with cutoff 10 (which filter genes where maximum count for each gene across all samples are less than 10) and activated by clicking <strong>Filter</strong> button which is located at the center of the page. After filtration you can see the distribution of the data as shown at below. Now, you can proceed by clicking <strong>Batch Effect Correction</strong> button.</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/example_filtering.png"><img alt="../_images/example_filtering.png" class="align-center" src="../_images/example_filtering.png" style="width: 99%;" /></a>
+<ol class="arabic" start="3">
+<li><p class="first"><strong>Batch Effect Correction and Normalization:</strong>  Following options were selected to normalize the data:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Normalization method:</strong> MRN</li>
+<li><strong>Correction Method:</strong> None</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<p>In order to adjust the appearance, use PCA controls which is located between two PCA plots.</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Text On/Off:</strong> On</li>
+<li><strong>Select legend:</strong> color</li>
+<li><strong>Color field:</strong> batch</li>
+<li><strong>Shape field:</strong> batch</li>
+</ul>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/example_pca_before_batch.png"><img alt="../_images/example_pca_before_batch.png" class="align-center" src="../_images/example_pca_before_batch.png" style="width: 60%;" /></a>
+<ol class="arabic simple" start="4">
+<li><strong>All2All:</strong>  After batch effect correction, you can click ‘Go to QC plots!’ to view quality control metrics on your data. The page opens with a Principal Component Analysis (PCA) plot. You can select <strong>All2All</strong> option from <strong>Plot type</strong> on the left sidebar menu. In order to get the figure as shown at below, you need to adjust other parameters of <strong>plot options</strong>    on the left sidebar menu.</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/example_all2all_before.png"><img alt="../_images/example_all2all_before.png" class="align-center" src="../_images/example_all2all_before.png" style="width: 55%;" /></a>
+<ul>
+<li><p class="first"><strong>All2All - Plot Options:</strong> Following options are selected and their screenshots are shown at below.</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Plot Type:</strong> All2All</li>
+<li><strong>Select Plot Options:</strong> Choose a dataset: all-detected</li>
+<li><strong>QC options - all2all - Size &amp; Margins:</strong> Check the box of the <strong>Plot Size</strong> and adjust width and height as 800 and 800, respectively.</li>
+<li><strong>QC options - all2all - Options:</strong>  corr font size: 1.8 (adjust the font size of the text inside the box)</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/example_all2all_menu.png"><img alt="../_images/example_all2all_menu.png" class="align-center" src="../_images/example_all2all_menu.png" style="width: 40%;" /></a>
+<ol class="arabic simple" start="5">
+<li><strong>Heatmap:</strong>  To visualize heatmap as shown at below, please select <strong>Heatmap</strong> option from <strong>Plot type</strong> on the left sidebar menu and adjust plot options.</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/example_heatmap_before.png"><img alt="../_images/example_heatmap_before.png" class="align-center" src="../_images/example_heatmap_before.png" style="width: 40%;" /></a>
+<ul>
+<li><p class="first"><strong>Heatmap - Plot Options:</strong> Similar to All2All plot, we need to adjust plotting options on the left sidebar menu.</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Plot Type:</strong> Heatmap</li>
+<li><strong>Heatmap Colors:</strong> Check the box of custom colors.</li>
+<li><strong>Select Plot Options:</strong> Choose a dataset: most varied, top-n:1000, total min count:100 (to show the top 1000 most varied genes (based on coefficient of variance) whose total counts are higher than 100)</li>
+<li><strong>QC options - kmeans:</strong> Check the box of kmeans clustering. Select 7 as # of clusters. You might need to change the order of the clusters and click <strong>change order</strong> button to get gradual changes on heatmap as in the figure.</li>
+<li><strong>QC options - heatmap - Size &amp; Margins:</strong> Check the box of the <strong>Plot Size</strong> and adjust width and height to 690 and 1200, respectively.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<img alt="../_images/example_heatmap_menu.png" class="align-center" src="../_images/example_heatmap_menu.png" />
+</div></blockquote>
+</div>
+<div class="section" id="qc-plots-after-batch-effect-correction">
+<h2>QC plots after Batch Effect Correction<a class="headerlink" href="#qc-plots-after-batch-effect-correction" title="Permalink to this headline">¶</a></h2>
+<p>Since we finalized out plots without applying batch effect correction, we can return back to batch effect correction step and change the <strong>Correction Method</strong> as <strong>Combat</strong> and continue to create new graphs with the same parameters as we used before. To make it more user friendly, we gonna start explain these steps from the beginning. If you choose to continue from batch effect correction, please skip first two steps and continue reading from 3rd step: <strong>Batch Effect Correction and Normalization</strong>.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first"><strong>Upload Data:</strong> To begin the analysis, load Demo Data by clicking <strong>Load Demo (Donnard et al)!</strong> button. Then click on <strong>Filter</strong> button to start <strong>Low Count Filtering</strong>.</p>
+</li>
+<li><p class="first"><strong>Low Count Filtering:</strong> Select <strong>Max</strong> method with cutoff 10 (which filter genes where maximum count for each gene across all samples are less than 10), then click <strong>Filter</strong> button which is located at the center of the page. After filtration, proceed to next step by clicking <strong>Batch Effect Correction</strong> button.</p>
+</li>
+<li><p class="first"><strong>Batch Effect Correction and Normalization:</strong>  Following options were selected to apply both normalization and batch effect correction:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Normalization method:</strong> MRN</li>
+<li><strong>Correction Method:</strong> Combat</li>
+<li><strong>Treatment:</strong> treatment</li>
+<li><strong>Batch:</strong> batch</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<p>Please adjust PCA controls (which is located between two PCA plots) as listed below.</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Text On/Off:</strong> On</li>
+<li><strong>Select legend:</strong> color</li>
+<li><strong>Color field:</strong> batch</li>
+<li><strong>Shape field:</strong> batch</li>
+</ul>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/example_pca_after_batch.png"><img alt="../_images/example_pca_after_batch.png" class="align-center" src="../_images/example_pca_after_batch.png" style="width: 60%;" /></a>
+<ol class="arabic simple" start="4">
+<li><strong>All2All:</strong>  After batch effect correction, click ‘Go to QC plots!’ and select <strong>All2All</strong> option from <strong>Plot type</strong> on the left sidebar menu. Please adjust All2All - Plot Options as listed below.</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/example_all2all_after.png"><img alt="../_images/example_all2all_after.png" class="align-center" src="../_images/example_all2all_after.png" style="width: 55%;" /></a>
+<ul>
+<li><p class="first"><strong>All2All - Plot Options:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Plot Type:</strong> All2All</li>
+<li><strong>Select Plot Options:</strong> Choose a dataset: all-detected</li>
+<li><strong>QC options - all2all - Size &amp; Margins:</strong> Check the box of the <strong>Plot Size</strong> and adjust width and height to 800 and 800, respectively.</li>
+<li><strong>QC options - all2all - Options:</strong>  corr font size: 1.8</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/example_all2all_menu.png"><img alt="../_images/example_all2all_menu.png" class="align-center" src="../_images/example_all2all_menu.png" style="width: 40%;" /></a>
+<ol class="arabic simple" start="5">
+<li><strong>Heatmap:</strong>  Please select <strong>Heatmap</strong> option from <strong>Plot type</strong> on the left sidebar menu and adjust plot options according to the list below.</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/example_heatmap_after.png"><img alt="../_images/example_heatmap_after.png" class="align-center" src="../_images/example_heatmap_after.png" style="width: 40%;" /></a>
+<ul>
+<li><p class="first"><strong>Heatmap - Plot Options:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Plot Type:</strong> Heatmap</li>
+<li><strong>Heatmap Colors:</strong> Check the box of custom colors.</li>
+<li><strong>Select Plot Options:</strong> Choose a dataset: most varied, top-n:1000, total min count:100 (to show the top 1000 most varied genes (based on coefficient of variance) whose total counts are higher than 100)</li>
+<li><strong>QC options - kmeans:</strong> Check the box of kmeans clustering. Select 7 as # of clusters. You might need to change the order of the clusters and click <strong>change order</strong> button to get gradual changes on heatmap as in the figure.</li>
+<li><strong>QC options - heatmap - Size &amp; Margins:</strong> Check the box of the <strong>Plot Size</strong> and adjust width and height to 690 and 1200, respectively.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<img alt="../_images/example_heatmap_menu.png" class="align-center" src="../_images/example_heatmap_menu.png" />
+</div></blockquote>
+</div>
+<div class="section" id="the-differential-expression-plots">
+<h2>The Differential Expression Plots<a class="headerlink" href="#the-differential-expression-plots" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first"><strong>Upload Data:</strong> To begin the analysis, load Count Data by clicking <strong>Load Demo (Vernia et. al)!</strong> button. Then click on <strong>Filter</strong> button to start <strong>Low Count Filtering</strong>.</p>
+</li>
+<li><p class="first"><strong>Low Count Filtering:</strong> Select <strong>Max</strong> method with cutoff 10 (which filter genes where maximum count for each gene across all samples are less than 10), then click <strong>Filter</strong> button which is located at the center of the page. Proceed to next step by clicking <strong>Batch Effect Correction</strong> button.</p>
+</li>
+<li><p class="first"><strong>Batch Effect Correction and Normalization:</strong>  We gonna skip both normalization and batch effect correction by selecting following options:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Normalization method:</strong> None</li>
+<li><strong>Correction Method:</strong> None</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>DE Analysis:</strong>  After batch effect correction, click ‘Go to DE Analysis’. In this page, we will add groups for comparison. Click on <strong>Add New Comparison</strong> button and select <strong>Select Meta</strong> as <strong>treatment</strong>. It will automatically separate experiment and control data into two groups. You can leave other parameters as default as listed below and click “Submit” button.</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>DE method:</strong> DESeq2</li>
+<li><strong>Fit Type:</strong> parametric</li>
+<li><strong>betaPrior:</strong> FALSE</li>
+<li><strong>Test Type:</strong> Wald</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/example_DE_form.png"><img alt="../_images/example_DE_form.png" class="align-center" src="../_images/example_DE_form.png" style="width: 90%;" /></a>
+<ol class="arabic simple" start="5">
+<li><strong>Main Plots Analysis:</strong> Upon finishing the DESeq analysis, you will see DE Results in table format. Please click on <strong>Go to Main Plots!</strong> button which will open <strong>Scatter Plot</strong>. You can switch to <strong>Volcano Plot</strong> and <strong>MA Plot</strong> by using <strong>Plot Type</strong> section at the left side of the menu. Since these plots are interactive, you can click to <strong>zoom</strong> button on the top of the graph and select the area you would like to zoom in by drawing a rectangle. Please see the plots at below:</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/example_main_plots.png"><img alt="../_images/example_main_plots.png" class="align-center" src="../_images/example_main_plots.png" style="width: 99%;" /></a>
+<p>Please keep in mind that to increace the performance of the generating graph, by default 10% of non-significant(NS) genes are used to generate plots. We used all of the NS genes in our plots that showed above, therefore please click <strong>Main Options</strong> button and change Background Data(%) to 100% on the left sidebar.</p>
+<a class="reference internal image-reference" href="../_images/example_background_data.png"><img alt="../_images/example_background_data.png" class="align-center" src="../_images/example_background_data.png" style="width: 30%;" /></a>
+<ol class="arabic simple" start="6">
+<li><strong>Read count plots:</strong> Lets return back to <strong>Scatter Plot</strong> by using <strong>Plot Type</strong> section. You can hover on each point on the graph to see their read counts as a bar graph as shown at below. In this example FABP3 is selected to show the high variance of this gene across samples.</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/example_scatter_hover.png"><img alt="../_images/example_scatter_hover.png" class="align-center" src="../_images/example_scatter_hover.png" style="width: 99%;" /></a>
+<p>If you want to mark FABP3 gene on the plot, click on Select Plot Options and enter <strong>FABP3</strong> in to the <strong>search field</strong> as showed below. You will see green mark on the plot that shows FABP3.</p>
+<a class="reference internal image-reference" href="../_images/example_scatter_search.png"><img alt="../_images/example_scatter_search.png" class="align-center" src="../_images/example_scatter_search.png" style="width: 30%;" /></a>
+<ol class="arabic simple" start="7">
+<li><strong>Lasso selection:</strong> DEBrowser can draw heatmaps of any selected region of any main plot. Selection can be made in a rectangular form or as a free-form using plotly’s lasso select. To do so, first click <strong>NS</strong> label at the upper right side of the figure, and hide non-significant genes. Then click on lasso select button at the top of the plot and select the genes you’re interested as shown at below. Heatmap will appear just next to scatter plot. Additionally, you can activate interactive mapping option for heatmap by clicking <strong>Interactive</strong> button under <strong>Heatmap Options</strong> on the left sidebar menu. Now, you can hover on the each block of heatmap to see gene name and its value.</li>
+</ol>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last"><strong>Interactive Feature:</strong> In order to increase the performance of the generating heatmaps, <strong>interactive</strong> option is disabled by default. After deciding plotting/clustering parameters of the heatmap, you might activate this feature to investigate each block in detail.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/example_scatter_lasso.png"><img alt="../_images/example_scatter_lasso.png" class="align-center" src="../_images/example_scatter_lasso.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../_images/example_scatter_lasso_heatmap.png"><img alt="../_images/example_scatter_lasso_heatmap.png" class="align-center" src="../_images/example_scatter_lasso_heatmap.png" style="width: 99%;" /></a>
+<ol class="arabic" start="8">
+<li><p class="first"><strong>Scatter plot of the genes enriched in insulin signalling pathway:</strong> In this example, we will highlight genes enriched in insulin signalling pathway. If you already hid NS genes, you can show them by clicking on the <strong>NS</strong> label at the upper right side of the figure. Click on the <strong>Select Plot Options</strong> and enter following genes in to the <strong>search field</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Cbl</span>
+<span class="n">Sos1</span>
+<span class="n">Irs2</span>
+<span class="n">Insr</span>
+<span class="n">Ptprf</span>
+<span class="n">Tsc1</span>
+<span class="n">Crkl</span>
+<span class="n">Prkar2a</span>
+<span class="n">Acaca</span>
+<span class="n">Fasn</span>
+<span class="n">Mapk8</span>
+<span class="n">Ppp1r3b</span>
+<span class="n">Ppp1r3c</span>
+<span class="n">Srebf1</span>
+<span class="n">Pklr</span>
+<span class="n">Pik3r1</span>
+<span class="n">Pygl</span>
+<span class="n">Pik3r3</span>
+<span class="n">Socs4</span>
+<span class="n">Socs2</span>
+<span class="n">Eif4ebp1</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">If you enter more than three lines of genes, search tool will automatically match the beginning and end of the search phrases. Otherwise it will find matched substrings in the gene list.</p>
+</div>
+<p>Now, you will see green marks on the <strong>searched genes</strong> as shown below:</p>
+<a class="reference internal image-reference" href="../_images/example_scatter_insulin_A.png"><img alt="../_images/example_scatter_insulin_A.png" class="align-center" src="../_images/example_scatter_insulin_A.png" style="width: 60%;" /></a>
+<p>Lets, hide all the genes other then <strong>searched genes</strong> by clicking <strong>NS</strong>, <strong>Up</strong> and <strong>Down</strong> labels at the upper right side of the figure. Since only the selected genes are left on the graph, we can select these genes by clicking on <strong>Select Box</strong> icon and drawing a rectangle which covers all of these genes.</p>
+<a class="reference internal image-reference" href="../_images/example_scatter_insulin_select.png"><img alt="../_images/example_scatter_insulin_select.png" class="align-center" src="../_images/example_scatter_insulin_select.png" style="width: 60%;" /></a>
+<p>Here as shown below, heatmap will be simultaneously created just next to scatter plot. You might need to change plot margins as following:</p>
+<ul class="simple">
+<li><strong>Heatmap options -&gt; heatmap - Size &amp; Margins:</strong> Please check the box of the <strong>Plot Size</strong> and adjust width and height to 580 and 500, respectively.</li>
+</ul>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/example_scatter_insulin_before_norm.png"><img alt="../_images/example_scatter_insulin_before_norm.png" class="align-center" src="../_images/example_scatter_insulin_before_norm.png" style="width: 60%;" /></a>
+</div></blockquote>
+<p>Since the data is not normalized, data of exper_rep3 looks like it belongs to control group. We strongly recommend normalization before plotting subset of genes. To normalize, please change the parameters as described below and see the updated figure at below:</p>
+<ul class="simple">
+<li><strong>Select Plot options -&gt; Normalization Methods:</strong> Please select <strong>MRN</strong> from the dropdown box.</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/example_scatter_insulin_B.png"><img alt="../_images/example_scatter_insulin_B.png" class="align-center" src="../_images/example_scatter_insulin_B.png" style="width: 60%;" /></a>
+</div></blockquote>
+<p>Activating <strong>Interactive</strong> feature changes the heatmap into an interactive version with two colors, allowing you to select specific genes to be compared
+within the GO term plots.</p>
+</div>
+<div class="section" id="go-term-plots">
+<h2>GO Term Plots<a class="headerlink" href="#go-term-plots" title="Permalink to this headline">¶</a></h2>
+<p>The next tab, ‘GO Term’, takes you to the ontology comparison portion of DEBrowser.  From here you can select the standard dataset options such as p-adjust value, fold change cut off value, which comparison set to use, and which dataset to use on the left menu.  In addition to these parameters, you also can choose from the 4 different ontology plot options: ‘enrichGO’,’enrichKEGG’, ‘Disease’, and ‘compareCluster’.  Selecting one of these plot options queries their specific databases with your current DESeq results.</p>
+<img alt="../_images/go_plots_opts.png" class="align-center" src="../_images/go_plots_opts.png" />
+<p>Your GO plots include:</p>
+<ul class="simple">
+<li>enrichGO - use enriched GO terms</li>
+<li>enrichKEGG - use enriched KEGG terms</li>
+<li>Disease - enriched for diseases</li>
+<li>compareClusters - comparison of your clustered data</li>
+</ul>
+<p>The types of plots you will be able to generate include:</p>
+<p>Summary plot:</p>
+<img alt="../_images/go_summary.png" class="align-center" src="../_images/go_summary.png" />
+<p>GOdotplot:</p>
+<img alt="../_images/go_dot_plot.png" class="align-center" src="../_images/go_dot_plot.png" />
+<p>Changing the type of ontology to use will also produce custom parameters for that specific ontology at the bottom of the
+left option panel.</p>
+<p>Once you have adjusted all of your parameters, you may hit the submit button in the top right and then wait
+for the results to show on screen!</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../future/future.html" class="btn btn-neutral" title="DEBrowser Additions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Alper Kucukural, Manuel Garber, Onur Yukselen.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.1.10',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

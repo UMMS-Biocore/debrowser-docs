@@ -1,0 +1,572 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quick-start Guide &mdash; DEBrowser 1.1.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="DEBrowser 1.1.10 documentation" href="../index.html"/>
+        <link rel="next" title="Local Install Guide" href="../local/local.html"/>
+        <link rel="prev" title="Welcome to DEBrowser’s documentation!" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DEBrowser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick-start Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#low-count-filtering">Low Count Filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#batch-effect-correction-and-normalization">Batch Effect Correction and Normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#de-analysis">DE Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-main-plots-of-de-analysis">The Main Plots of DE Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-heatmap-of-de-analysis">The Heatmap of DE Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#go-term-plots">GO Term Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-tables">Data Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quality-control-plots">Quality Control Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">Autoload Data via Hyperlink</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../local/local.html">Local Install Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deseq/deseq.html">DE Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../heatmap/heatmap.html">Heatmaps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/modules.html">DEBrowser Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../future/future.html">DEBrowser Additions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/examples.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DEBrowser</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Quick-start Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/quickstart/quickstart.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="quick-start-guide">
+<h1>Quick-start Guide<a class="headerlink" href="#quick-start-guide" title="Permalink to this headline">¶</a></h1>
+<p>This guide is walkthrough for the DEBrowser from start to finish.</p>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>First off, we need to head to the DEBrowser webpage at this url:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">debrowser</span><span class="o">.</span><span class="n">umassmed</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Alternatively, if you have the R package installed, you can call these R commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">debrowser</span><span class="p">)</span>
+<span class="n">startDEBrowser</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">For more information on installing DEBrowser locally, please consult our <a class="reference external" href="http://debrowser.readthedocs.io/en/latest/local/local.html">Local Install Guide</a>.</p>
+</div>
+<p>Once you’ve made your way to the website, or you have a local instance of DEBrowser running, you will be greeted with data loading section:</p>
+<img alt="../_images/data_load.png" class="align-center" src="../_images/data_load.png" />
+<p>To begin the analysis, you need to upload your <em>count data file</em> (comma or semicolon separated (CSV), and tab separated (TSV) format) to be analyzed and choose appropiate separator for the file (comma, semicolon or tab).</p>
+<p>If you do not have a dataset to upload, you can use the built in demo data file by clicking on the ‘Load Demo (Vernia et al.)!’ button.  To view the entire demo data file, you can download
+this <a class="reference external" href="https://bioinfo.umassmed.edu/pub/debrowser/simple_demo.tsv">demo set</a>.  For an example case study, try our <a class="reference external" href="https://bioinfo.umassmed.edu/pub/debrowser/advanced_demo.tsv">advanced demo</a>.</p>
+<p>The structure of the count data files are shown below:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">gene</th>
+<th class="head">trans</th>
+<th class="head">exp1</th>
+<th class="head">exp2</th>
+<th class="head">cont1</th>
+<th class="head">cont2</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>DQ714</td>
+<td>uc007</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr class="row-odd"><td>DQ554</td>
+<td>uc008</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr class="row-even"><td>AK028</td>
+<td>uc011</td>
+<td>2.00</td>
+<td>1.29</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">DEBrowser also accepts count data files via hyperlink, for more information please see the <a class="reference external" href="quickstart.html#autoload-data-via-hyperlink">autoload data via hyperlink</a> section.</p>
+</div>
+<p>In addition to the count data file; you need to upload metadata file to correct for batch effects or any other normalizing conditions you might want to address that might be within your results. To handle for these conditions, simply create a metadata file by using the example table at below or download sample file from <a class="reference external" href="https://raw.githubusercontent.com/onuryukselen/debrowser/develop/docs/quickstart/metadata.tsv">this link</a>.</p>
+<p>Once the count data and metadata files have been loaded in Debrowser, you can click upload button to visualize your data as shown at below:</p>
+<img alt="../_images/upload_summary.png" class="align-center" src="../_images/upload_summary.png" />
+<p>After loading the gene quantification file, and if specified the metadata file containing your batch correction fields, you then have the option to filter low counts and conduct batch effect correction prior to your analysis. Alternatively you may skip these steps and directly continue with differential expression analysis or view quality control (QC) information of your dataset.</p>
+</div>
+<div class="section" id="low-count-filtering">
+<h2>Low Count Filtering<a class="headerlink" href="#low-count-filtering" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/show_data.png"><img alt="../_images/show_data.png" class="align-center" src="../_images/show_data.png" style="width: 70%;" /></a>
+<p>Afterwards, you may continue your analysis with <strong>Batch Effect Correction</strong> or directly jump to differential expression analysis or view quality control (QC) information of your dataset.</p>
+</div>
+<div class="section" id="batch-effect-correction-and-normalization">
+<h2>Batch Effect Correction and Normalization<a class="headerlink" href="#batch-effect-correction-and-normalization" title="Permalink to this headline">¶</a></h2>
+<p>If specified metadata file containing your batch correction fields, then you have the option to conduct batch effect correction prior to your analysis. By adjusting parameters of <strong>Options</strong> box, you can investigate your character of your dataset. These parameters of the options box are explained as following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Normalization Method:</strong> DEBrowser allows performing normalization prior the batch effect correction. You may choose your normalization method (among MRN (Median Ratio Normalization), TMM (Trimmed Mean of M-values), RLE (Relative Log Expression) and upperquartile), or skip this step by choosing <strong>none</strong> for this item. For our sample data, we gonna choose MRN normalization.</li>
+<li><strong>Correction Method:</strong> DEBrowser uses <a class="reference external" href="https://bioconductor.org/packages/release/bioc/vignettes/sva/inst/doc/sva.pdf">ComBat</a> (part of the SVA bioconductor package) or <a class="reference external" href="https://www.bioconductor.org/packages/3.7/bioc/vignettes/Harman/inst/doc/IntroductionToHarman.html">Harman</a> to adjust for possible batch effect or conditional biases. For more information, you can visit following links for documentation: <a class="reference external" href="https://bioconductor.org/packages/release/bioc/vignettes/sva/inst/doc/sva.pdf">ComBat</a>, <a class="reference external" href="https://www.bioconductor.org/packages/3.7/bioc/vignettes/Harman/inst/doc/IntroductionToHarman.html">Harman</a> For our sample data, Combat correction was selected.</li>
+<li><strong>Treatment:</strong> Please select the column that is specified in metadata file for comparision, such as cancer vs control. It is named <em>treatment</em> for our sample metadata.</li>
+<li><strong>Batch:</strong> Please select the column name in metadata file which differentiate the batches. For example in our metadata, it is called <em>batch</em>.</li>
+</ul>
+</div></blockquote>
+<p>Upon clicking submit button, comparison tables and plots will be created on the right part of the screen as shown below.</p>
+<a class="reference internal image-reference" href="../_images/batch_PCA.png"><img alt="../_images/batch_PCA.png" class="align-center" src="../_images/batch_PCA.png" style="width: 99%;" /></a>
+<a class="reference internal image-reference" href="../_images/batch_IQR.png"><img alt="../_images/batch_IQR.png" class="align-center" src="../_images/batch_IQR.png" style="width: 99%;" /></a>
+<a class="reference internal image-reference" href="../_images/batch_density.png"><img alt="../_images/batch_density.png" class="align-center" src="../_images/batch_density.png" style="width: 99%;" /></a>
+<p>You can investigate the changes on the data by comparing following features:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Read counts for each sample.</li>
+<li>PCA, IQR and Density plot of the dataset.</li>
+<li>Gene/region vs samples data</li>
+</ul>
+</div></blockquote>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">You can investigate the gene/region vs samples data in detail by clicking the <strong>Show Data</strong> button, or download all corrected data by clicking <strong>Download</strong> button.</p>
+</div>
+<p>Since we have completed <strong>batch effect correction and normalization</strong> step, we can continue with one of the following options: ‘Go to DE Analysis’ and ,’Go to QC plots!’. First option takes you to page where differential expression analyses are conducted with DESeq2, EdgeR or Limma. The second option, ‘Go to QC plots!’, takes you to a page where you can view quality control metrics of your data by PCA, All2All, Heatmap, Density, and IQR plots.</p>
+</div>
+<div class="section" id="de-analysis">
+<h2>DE Analysis<a class="headerlink" href="#de-analysis" title="Permalink to this headline">¶</a></h2>
+<p>The first option, ‘Go to DE Analysis’, takes you to the next step where differential expression analyses are conducted.</p>
+<blockquote>
+<div><ul>
+<li><p class="first"><strong>Sample Selection:</strong> In order to run DE analysis, you first need to select the samples which will be compared. To do so, click on “Add New Comparison” button, and choose <strong>Select Meta</strong> box as <strong>treatment</strong> to simplify fill <code class="docutils literal notranslate"><span class="pre">Condition</span> <span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">Condition</span> <span class="pre">2</span></code> based on the <strong>treatment</strong> column of the metadata as shown below.</p>
+<blockquote>
+<div><img alt="../_images/de_selection.png" class="align-center" src="../_images/de_selection.png" />
+</div></blockquote>
+</li>
+</ul>
+<p>If you need to remove samples from a condition, simply select the sample you wish to remove and hit the delete/backspace key. In case, you need to add a sample to a condition you can click on one of the condition text boxes to bring up a list of samples and then click on the sample you wish to add from the list and it will be added to the textbox for that comparison.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">You can add multiple conditions to compare by clicking on “Add New Comparison” button, and view the results seperately after DE analysis.</p>
+</div>
+<ul class="simple">
+<li><strong>Method Selection:</strong> Three DE methods are available for DEBrowser: DESeq2, EdgeR, and Limma. DESeq2 and EdgeR are designed to normalize count data from high-throughput sequencing assays such as RNA-Seq. On the other hand, Limma is a package to analyse of normalized or transformed data from microarray or RNA-Seq assays. We have selected DESeq2 for our test sample and showed the related results at below.</li>
+</ul>
+</div></blockquote>
+<p>After clicking on the ‘Submit!’ button, DESeq2 will analyze your comparisons and store the results into seperate data tables. It is important to note that the resulting data produced from DESeq is normalized. Upon finishing the DESeq analysis, a result table will appear which allows you to download the data by clicking “Download” button. To visualize the data with interactive plots please click on “Go to Main Plots!” button.</p>
+</div>
+<div class="section" id="the-main-plots-of-de-analysis">
+<h2>The Main Plots of DE Analysis<a class="headerlink" href="#the-main-plots-of-de-analysis" title="Permalink to this headline">¶</a></h2>
+<p>Upon finishing the DESeq analysis, please click on <strong>Go to Main Plots!</strong> button which will open <strong>Main Plots</strong> tab where you will be able to view
+the interactive plots.</p>
+<img alt="../_images/info_tabs.png" class="align-center" src="../_images/info_tabs.png" />
+<p>The page will loads with <strong>Scatter Plot</strong>. You can switch to <strong>Volcano Plot</strong> and <strong>MA Plot</strong> by using <strong>Plot Type</strong> section at the left side of the menu. Since these plots are interactive, you can click to <strong>zoom</strong> button on the top of the graph and select the area you would like to zoom in by drawing a rectangle. Please see the plots at below:</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/example_main_plots1.png"><img alt="../_images/example_main_plots1.png" class="align-center" src="../_images/example_main_plots1.png" style="width: 99%;" /></a>
+</div></blockquote>
+<p><strong>A.</strong> Scatter plot, <strong>B.</strong> Volcano plot, <strong>C.</strong> MA plot</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Please keep in mind that to increace the performance of the generating graph, by default 10% of non-significant(NS) genes are used to generate plots. You might show all NS genes by please click <strong>Main Options</strong> button and change Background Data(%) to 100% on the left sidebar.</p>
+<a class="last reference internal image-reference" href="../_images/example_background_data1.png"><img alt="../_images/example_background_data1.png" class="align-center" src="../_images/example_background_data1.png" style="width: 30%;" /></a>
+</div>
+<p>You can hover over the scatterplot points to display more information about the point selected. A few bargraphs will be generated for the user to view as soon as a scatterplot point is hovered over.</p>
+<a class="reference internal image-reference" href="../_images/main_plot_hover.png"><img alt="../_images/main_plot_hover.png" class="align-center" src="../_images/main_plot_hover.png" style="width: 99%;" /></a>
+<p><strong>A.</strong> Hover on Fabp3 gene, <strong>B.</strong> Read Counts vs Samples, <strong>C.</strong> Read Counts vs Conditions</p>
+<p>You also have a wide array of options when it comes to fold change cut-off levels, padj cut-off values, which comparison set to use, and dataset of genes to analyze.</p>
+<a class="reference internal image-reference" href="../_images/main_plot_filters.png"><img alt="../_images/main_plot_filters.png" class="align-center" src="../_images/main_plot_filters.png" style="width: 35%;" /></a>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>It is important to note that when conducting multiple comparisons, the comparisons are labeled based on the order that they are input. If you don’t remember which samples are in your current comparison you can always view the samples in each condition at the top of the main plots.</p>
+<img alt="../_images/selected_conditions.png" class="last align-center" src="../_images/selected_conditions.png" />
+</div>
+<p>After DE analysis, you can always download the results in CSV format by clicking the <strong>Download Data</strong> button located under the <strong>Select Plot Options</strong>. You can also download the plot or graphs by clicking on the <strong>download</strong> button at top of each plot or graph.</p>
+</div>
+<div class="section" id="the-heatmap-of-de-analysis">
+<h2>The Heatmap of DE Analysis<a class="headerlink" href="#the-heatmap-of-de-analysis" title="Permalink to this headline">¶</a></h2>
+<p>Once you’ve selected a specific region on Main Plots (Scatter, Volcano or MA plot), a new heatmap of the selected area will appear just next to your plot. If you want to hide some groups (such as Up, Down or NS based on DE analysis), just click on the group label on the top right part of the figure. In this way, you can select a specific part of the genes by <strong>lasso select</strong> or <strong>box select</strong> tools that includes only <strong>Up</strong> or <strong>Down</strong> Regulated genes. As soon as you completed your selection, heatmap will be created simultaneously. Please find details about heatmaps on <a class="reference external" href="./../heatmap/heatmap.html">Heatmaps</a> section.</p>
+<a class="reference internal image-reference" href="../_images/main_plot_selection1.png"><img alt="../_images/main_plot_selection1.png" class="align-center" src="../_images/main_plot_selection1.png" style="width: 99%;" /></a>
+<p><strong>A.</strong> Box Selection, <strong>B.</strong> Lasso Selection, <strong>C.</strong> Created heatmap based on selection</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">We strongly recommend normalization before plotting heatmaps. To normalize, please change the parameters that are located under: <strong>Select Plot options -&gt; Normalization Methods</strong> and select the method from the dropdown box.</p>
+</div>
+</div>
+<div class="section" id="go-term-plots">
+<h2>GO Term Plots<a class="headerlink" href="#go-term-plots" title="Permalink to this headline">¶</a></h2>
+<p>The next tab, ‘GO Term’, takes you to the ontology comparison portion of
+DEBrowser.  From here you can select the standard dataset options such as
+p-adjust value, fold change cut off value, which comparison set to use, and
+which dataset to use on the left menu.  In addition to these parameters, you
+also can choose from the 4 different ontology plot options: ‘enrichGO’,
+‘enrichKEGG’, ‘Disease’, and ‘compareCluster’.  Selecting one of these plot
+options queries their specific databases with your current DESeq results.</p>
+<img alt="../_images/go_plots_opts1.png" class="align-center" src="../_images/go_plots_opts1.png" />
+<p>Your GO plots include:</p>
+<ul class="simple">
+<li>enrichGO - use enriched GO terms</li>
+<li>enrichKEGG - use enriched KEGG terms</li>
+<li>Disease - enriched for diseases</li>
+<li>compareClusters - comparison of your clustered data</li>
+</ul>
+<p>The types of plots you will be able to generate include:</p>
+<p>Summary plot:</p>
+<img alt="../_images/go_summary1.png" class="align-center" src="../_images/go_summary1.png" />
+<p>GOdotplot:</p>
+<img alt="../_images/go_dot_plot1.png" class="align-center" src="../_images/go_dot_plot1.png" />
+<p>Changing the type of ontology to use will also produce custom parameters for that specific ontology at the bottom of the
+left option panel.</p>
+<p>Once you have adjusted all of your parameters, you may hit the submit button in the top right and then wait
+for the results to show on screen!</p>
+</div>
+<div class="section" id="data-tables">
+<h2>Data Tables<a class="headerlink" href="#data-tables" title="Permalink to this headline">¶</a></h2>
+<p>The lasttab at the top of the screen displays various different data tables.
+These datatables include:</p>
+<ul class="simple">
+<li>All Detected</li>
+<li>Up Regulated</li>
+<li>Down Regulated</li>
+<li>Up+down Regulated</li>
+<li>Selected scatterplot points</li>
+<li>Most varied genes</li>
+<li>Comparison differences</li>
+</ul>
+<img alt="../_images/datatable.png" class="align-center" src="../_images/datatable.png" />
+<p>All of the tables tables, except the Comparisons table, contain the following information:</p>
+<ul class="simple">
+<li>ID - The specific gene ID</li>
+<li>Sample Names - The names of the samples given and they’re corresponding tmm normalized counts</li>
+<li>Conditions - The log averaged values</li>
+<li>padj - padjusted value</li>
+<li>log2FoldChange - The Log2 fold change</li>
+<li>foldChange - The fold change</li>
+<li>log10padj - The log 10 padjusted value</li>
+</ul>
+<p>The Comparisons table generates values based on the number of comparisons you have conducted.
+For each pairwise comparison, these values will be generated:</p>
+<ul class="simple">
+<li>Values for each sample used</li>
+<li>foldChange of comparison A vs B</li>
+<li>pvalue of comparison A vs B</li>
+<li>padj value of comparison A vs B</li>
+</ul>
+<img alt="../_images/comparisons.png" class="align-center" src="../_images/comparisons.png" />
+<p>You can further customize and filter each specific table a multitude of ways.  For unique table or dataset options, select the type of
+table dataset you would like to customize on the left panel under ‘Choose a dataset’ to view it’s additional options.
+All of the tables have a built in search function at the top right of the table and you can further sort the table
+by column by clicking on the column header you wish to sort by.  The ‘Search’ box on the left panel allows for multiple searches via
+a comma-seperated list.  You can additionally use regex terms such as “^al” or “*lm” for even more advanced searching.
+This search will be applied to wherever you are within DEBrowser, including both the plots and the tables.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">If you enter more than three lines of genes, search tool will automatically match the beginning and end of the search phrases. Otherwise it will find matched substrings in the gene list.</p>
+</div>
+<hr class="docutils" />
+<p>You can also view specific tables of your input data for each type of dataset available and search for a specific geneset
+by inputting a comma-seperated list of genes or regex terms to search for in the search box within the left panel.
+To view these tables, you must select the tab labeled ‘Tables’ as well as the dataset from the dropdown menu on the left panel.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">If you ever want to change your parameters, or even add a new set of comparisons, you can always return to the <em>Data Prep</em> tab to change and resubmit your data.</p>
+</div>
+</div>
+<div class="section" id="quality-control-plots">
+<h2>Quality Control Plots<a class="headerlink" href="#quality-control-plots" title="Permalink to this headline">¶</a></h2>
+<p>Selecting the ‘QC Plots’ tab will take you to the quality control plots section.  The page opens with a Principal Component Analysis (PCA) plot and users can also view a All2All, heatmap, IQR, and density by choosing <strong>Plot Type</strong> in the left panel. Here the dataset being used in the plots, depends on the parameters you selected in the left panel. Therefore, you are able to adjust the size of the plots under ‘width’ and ‘height’ as well as alter a variety of other parameters to adjust the specific plot you’re viewing.</p>
+<p>The All2All plot displays the correlation between each sample, Heatmap shows a heatmap representation of your data, IQR displays a barplot displaying the IQR between samples, and Density will display an overlapping density graph for each sample. You also have the ability to select the type of clustering and distance method for the heatmap produced to further customize your quality control measures. Users also have the option to select which type of normalization methods they would like to use for these specific plotting analysis within the left menu.</p>
+<a class="reference internal image-reference" href="../_images/intro_sidebar.png"><img alt="../_images/intro_sidebar.png" class="align-center" src="../_images/intro_sidebar.png" style="width: 30%;" /></a>
+<p>Ploting Options</p>
+<img alt="../_images/intro_qc_all2all.png" class="align-center" src="../_images/intro_qc_all2all.png" />
+<p>All2All Plot</p>
+<img alt="../_images/intro_qc_heatmap.png" class="align-center" src="../_images/intro_qc_heatmap.png" />
+<p>Heatmap Options to Normalize All Detected Data and Created Heatmap</p>
+<img alt="../_images/intro_qc_pca.png" class="align-center" src="../_images/intro_qc_pca.png" />
+<p>PCA Plot</p>
+<img alt="../_images/intro_qc_pca_loads.png" class="align-center" src="../_images/intro_qc_pca_loads.png" />
+<p>PCA Loadings</p>
+<img alt="../_images/iqr_plot.png" class="align-center" src="../_images/iqr_plot.png" />
+<p>IQR Plot Before Normalization</p>
+<img alt="../_images/iqr_plot_norm.png" class="align-center" src="../_images/iqr_plot_norm.png" />
+<p>IQR Plot After Normalization</p>
+<img alt="../_images/density_plot.png" class="align-center" src="../_images/density_plot.png" />
+<p>Density Plot Before Normalization</p>
+<img alt="../_images/density_plot_norm.png" class="align-center" src="../_images/density_plot_norm.png" />
+<p>Density Plot After Normalization</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Each QC plot also has options to adjust the plot height and width, as well as a download button for a png output located above each plot.</p>
+</div>
+<p>For the Heatmap, you can also view an interactive session of the heatmap by selecting the ‘Interactive’ checkbox before submitting your
+heatmap request.  Make sure that before selecting the interactive heatmap option that your dataset being used is ‘Up+down’.
+Just like in the Main Plots, you can click and drag to create a selection. To select a specific portion of the heatmap, make sure
+to highlight the middle of the heatmap gene box in order to fully select a specific gene.  This selection can be used later within the
+GO Term plots for specific queries on your selection. For find more details please click <a class="reference external" href="./../heatmap/heatmap.html">Heatmaps</a> section.</p>
+<a class="reference internal image-reference" href="../_images/interactive_heatmap1.png"><img alt="../_images/interactive_heatmap1.png" class="align-center" src="../_images/interactive_heatmap1.png" style="width: 99%;" /></a>
+<ol class="upperalpha simple">
+<li>Before Selection B. Selection of area with zoom tool C. Zoomed heatmap region which allows better viewing resolution.</li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h2>Autoload Data via Hyperlink<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>DEBrowser also accepts TSV’s via hyperlink by following conversion steps. First, using the API provided by Dolphin, we will convert TSV into an html represented TSV using this website:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dolphin</span><span class="o">.</span><span class="n">umassmed</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">public</span><span class="o">/</span><span class="n">api</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>The two parameters it accepts (and examples) are:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>source=https://bioinfo.umassmed.edu/pub/debrowser/advanced_demo.tsv</li>
+<li>format=JSON</li>
+</ol>
+</div></blockquote>
+<p>Leaving you with a hyperlink for:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>https://dolphin.umassmed.edu/public/api/?source=https://bioinfo.umassmed.edu/pub/debrowser/advanced_demo.tsv&amp;format=JSON
+</pre></div>
+</div>
+<p>Next you will need to encode the url so you can pass it to the DEBrowser website.
+You can find multiple url encoders online, such as the one located at <a class="reference external" href="https://www.url-encode-decode.com/">this
+link.</a>.</p>
+<p>Encoding our URL will turn it into this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="o">%</span><span class="mi">3</span><span class="n">A</span><span class="o">%</span><span class="mi">2</span><span class="n">F</span><span class="o">%</span><span class="mi">2</span><span class="n">Fdolphin</span><span class="o">.</span><span class="n">umassmed</span><span class="o">.</span><span class="n">edu</span><span class="o">%</span><span class="mi">2</span><span class="n">Fpublic</span><span class="o">%</span><span class="mi">2</span><span class="n">Fapi</span><span class="o">%</span><span class="mi">2</span><span class="n">F</span><span class="o">%</span><span class="mi">3</span><span class="n">Fsource</span><span class="o">%</span><span class="mi">3</span><span class="n">Dhttp</span><span class="o">%</span><span class="mi">3</span><span class="n">A</span><span class="o">%</span><span class="mi">2</span><span class="n">F</span><span class="o">%</span><span class="mi">2</span><span class="n">Fbioinfo</span><span class="o">.</span><span class="n">umassmed</span><span class="o">.</span><span class="n">edu</span><span class="o">%</span><span class="mi">2</span><span class="n">Fpub</span><span class="o">%</span><span class="mi">2</span><span class="n">Fdebrowser</span><span class="o">%</span><span class="mi">2</span><span class="n">Fadvanced_demo</span><span class="o">.</span><span class="n">tsv</span><span class="o">%</span><span class="mi">26</span><span class="nb">format</span><span class="o">%</span><span class="mi">3</span><span class="n">DJSON</span>
+</pre></div>
+</div>
+<p>Now this link can be used in debrowser as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">debrowser</span><span class="o">.</span><span class="n">umassmed</span><span class="o">.</span><span class="n">edu</span><span class="p">:</span><span class="mi">443</span><span class="o">/</span><span class="n">debrowser</span><span class="o">/</span><span class="n">R</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>It accepts two parameters:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">jsonobject</span><span class="o">=</span> <span class="n">http</span><span class="o">%</span><span class="mi">3</span><span class="n">A</span><span class="o">%</span><span class="mi">2</span><span class="n">F</span><span class="o">%</span><span class="mi">2</span><span class="n">Fdolphin</span><span class="o">.</span><span class="n">umassmed</span><span class="o">.</span><span class="n">edu</span><span class="o">%</span><span class="mi">2</span><span class="n">Fpublic</span><span class="o">%</span><span class="mi">2</span><span class="n">Fapi</span><span class="o">%</span><span class="mi">2</span><span class="n">F</span><span class="o">%</span><span class="mi">3</span><span class="n">Fsource</span><span class="o">%</span><span class="mi">3</span><span class="n">Dhttp</span><span class="o">%</span><span class="mi">3</span><span class="n">A</span><span class="o">%</span><span class="mi">2</span><span class="n">F</span><span class="o">%</span><span class="mi">2</span><span class="n">Fbioinfo</span><span class="o">.</span><span class="n">umassmed</span><span class="o">.</span><span class="n">edu</span><span class="o">%</span><span class="mi">2</span><span class="n">Fpub</span><span class="o">%</span><span class="mi">2</span><span class="n">Fdebrowser</span><span class="o">%</span><span class="mi">2</span><span class="n">Fadvanced_demo</span><span class="o">.</span><span class="n">tsv</span><span class="o">%</span><span class="mi">26</span><span class="nb">format</span><span class="o">%</span><span class="mi">3</span><span class="n">DJSON</span>
+<span class="mf">2.</span> <span class="n">title</span><span class="o">=</span> <span class="n">no</span>
+</pre></div>
+</div>
+<p>The finished product of the link will look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>https://debrowser.umassmed.edu:443/debrowser/R/?jsonobject=https://dolphin.umassmed.edu/public/api/?source=https://bioinfo.umassmed.edu/pub/debrowser/advanced_demo.tsv&amp;format=JSON&amp;title=no
+</pre></div>
+</div>
+<p>Inputting this URL into your browser will automatically load in that tsv to be analyzed by DEBrowser!</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../local/local.html" class="btn btn-neutral float-right" title="Local Install Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="Welcome to DEBrowser’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Alper Kucukural, Manuel Garber, Onur Yukselen.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.1.10',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

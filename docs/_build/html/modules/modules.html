@@ -1,0 +1,609 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DEBrowser Modules &mdash; DEBrowser 1.1.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="DEBrowser 1.1.10 documentation" href="../index.html"/>
+        <link rel="next" title="DEBrowser Additions" href="../future/future.html"/>
+        <link rel="prev" title="Heatmaps" href="../heatmap/heatmap.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DEBrowser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quickstart/quickstart.html">Quick-start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/local.html">Local Install Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deseq/deseq.html">DE Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../heatmap/heatmap.html">Heatmaps</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DEBrowser Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#demo-data">Demo Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-modules">Example Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../future/future.html">DEBrowser Additions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/examples.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DEBrowser</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>DEBrowser Modules</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/modules/modules.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="debrowser-modules">
+<h1>DEBrowser Modules<a class="headerlink" href="#debrowser-modules" title="Permalink to this headline">¶</a></h1>
+<p>Debrowser is created with moduler structure which allows user to run each module separately. In this guide, you can find explanation about structure of  modules and how to run each module.</p>
+<div class="section" id="demo-data">
+<h2>Demo Data<a class="headerlink" href="#demo-data" title="Permalink to this headline">¶</a></h2>
+<p>To start with, you need to create following variables: <code class="docutils literal notranslate"><span class="pre">demodata</span></code> and <code class="docutils literal notranslate"><span class="pre">metadatatable</span></code> by using your data and save as <code class="docutils literal notranslate"><span class="pre">demodata.Rda</span></code>. The structure of these variables showed at below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">head</span> <span class="p">(</span><span class="n">demodata</span><span class="p">)</span>
+               <span class="n">exper_rep1</span> <span class="n">exper_rep2</span> <span class="n">exper_rep3</span> <span class="n">control_rep1</span> <span class="n">control_rep2</span> <span class="n">control_rep3</span>
+<span class="n">AK212155</span>       <span class="mf">0.00</span>       <span class="mf">0.00</span>          <span class="mi">0</span>          <span class="mf">0.0</span>            <span class="mi">0</span>            <span class="mi">0</span>
+<span class="n">Sp2</span>           <span class="mf">52.00</span>      <span class="mf">47.00</span>         <span class="mi">36</span>         <span class="mf">99.0</span>           <span class="mi">53</span>           <span class="mi">66</span>
+<span class="n">AK051368</span>       <span class="mf">4.39</span>       <span class="mf">1.11</span>          <span class="mi">0</span>          <span class="mf">1.1</span>            <span class="mi">0</span>            <span class="mi">0</span>
+<span class="n">Ubiad1</span>       <span class="mf">121.00</span>     <span class="mf">125.00</span>         <span class="mi">65</span>        <span class="mf">134.0</span>           <span class="mi">95</span>          <span class="mi">111</span>
+<span class="n">Src</span>           <span class="mf">21.00</span>      <span class="mf">35.00</span>         <span class="mi">20</span>         <span class="mf">43.0</span>           <span class="mi">22</span>           <span class="mi">32</span>
+<span class="n">Racgap1</span>        <span class="mf">9.00</span>      <span class="mf">20.00</span>         <span class="mi">11</span>         <span class="mf">14.0</span>           <span class="mi">10</span>            <span class="mi">7</span>
+
+<span class="o">&gt;</span> <span class="n">head</span> <span class="p">(</span><span class="n">metadatatable</span><span class="p">)</span>
+  <span class="n">samples</span>          <span class="n">treatment</span> <span class="n">batch</span>
+<span class="mi">1</span>   <span class="n">exper_rep1</span>     <span class="n">cond1</span>     <span class="mi">1</span>
+<span class="mi">2</span>   <span class="n">exper_rep2</span>     <span class="n">cond1</span>     <span class="mi">2</span>
+<span class="mi">3</span>   <span class="n">exper_rep3</span>     <span class="n">cond1</span>     <span class="mi">1</span>
+<span class="mi">4</span> <span class="n">control_rep1</span>     <span class="n">cond2</span>     <span class="mi">2</span>
+<span class="mi">5</span> <span class="n">control_rep2</span>     <span class="n">cond2</span>     <span class="mi">1</span>
+<span class="mi">6</span> <span class="n">control_rep3</span>     <span class="n">cond2</span>     <span class="mi">2</span>
+</pre></div>
+</div>
+<p>One way to import tsv files is showed at below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">demodata</span>  <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;~/Downloads/shKRAS.tsv&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">T</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now we can run each modules separately through R studio by clicking <strong>Run App</strong> button.</p>
+</div>
+<div class="section" id="example-modules">
+<h2>Example Modules<a class="headerlink" href="#example-modules" title="Permalink to this headline">¶</a></h2>
+<p>You can reach <a class="reference external" href="https://github.com/UMMS-Biocore/debrowser_bioconductor_release/tree/develop/inst/extdata/demo">demo data</a> and latest versions of modules through our <a class="reference external" href="https://github.com/UMMS-Biocore/debrowser_bioconductor_release/tree/develop/inst/examples">github page.</a></p>
+<p>Barmain plot:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(debrowser)
+options(warn =-1)
+header &lt;- dashboardHeader( title = &quot;DEBrowser Bar Plots&quot; )
+
+sidebar &lt;- dashboardSidebar(
+    sidebarMenu(
+        id=&quot;DEAnlysis&quot;,
+        menuItem(&quot;BarMain&quot;, tabName = &quot;BarMain&quot;),
+        textInput(&quot;genename&quot;, &quot;Gene/Region Name&quot;, value = &quot;Foxa3&quot;),
+        plotSizeMarginsUI(&quot;barmain&quot;, h=400)
+    )
+)
+
+body &lt;- dashboardBody(
+    tabItems(
+        tabItem(
+            tabName=&quot;BarMain&quot;,
+            fluidRow(column(12,getBarMainPlotUI(&quot;barmain&quot;)))
+        )
+    )
+)
+
+ui &lt;- dashboardPage(header, sidebar, body, skin = &quot;blue&quot;)
+
+server &lt;- function(input, output, session) {
+    load(system.file(&quot;extdata&quot;, &quot;demo&quot;, &quot;demodata.Rda&quot;, package = &quot;debrowser&quot;))
+        observe({
+            if (!is.null(input$genename))
+                callModule(debrowserbarmainplot, &quot;barmain&quot;, demodata, metadatatable$sample, metadatatable$treatment, input$genename)
+            })
+}
+
+shinyApp(ui, server)
+</pre></div>
+</div>
+<p>The example module is created with UI and Server with <code class="docutils literal notranslate"><span class="pre">shinyApp(ui,</span> <span class="pre">server)</span></code> command. Similarly UI structure is defined with the <code class="docutils literal notranslate"><span class="pre">ui</span> <span class="pre">&lt;-</span> <span class="pre">dashboardPage(header,</span> <span class="pre">sidebar,</span> <span class="pre">body,</span> <span class="pre">skin</span> <span class="pre">=</span> <span class="pre">&quot;blue&quot;)</span></code> command. You can simply follow the structure of UI which is created by four variables: <code class="docutils literal notranslate"><span class="pre">header</span></code>, <code class="docutils literal notranslate"><span class="pre">sidebar</span></code>, <code class="docutils literal notranslate"><span class="pre">body</span></code> and <code class="docutils literal notranslate"><span class="pre">skin</span></code>. In the server function, <code class="docutils literal notranslate"><span class="pre">demodata</span></code>, <code class="docutils literal notranslate"><span class="pre">metadatatable</span></code> variables are loaded from <code class="docutils literal notranslate"><span class="pre">demodata.Rda</span></code>, and debrowserbarmainplot module is called with <code class="docutils literal notranslate"><span class="pre">callModule</span></code> function.</p>
+<p>Main Plots:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(plotly)
+library(debrowser)
+source(&quot;../../R/mainScatter.R&quot;)
+
+header &lt;- dashboardHeader(title = &quot;DEBrowser Main Plots&quot;)
+sidebar &lt;- dashboardSidebar(  sidebarMenu(id=&quot;DEAnalysis&quot;,
+    menuItem(&quot;Main&quot;, tabName = &quot;Main&quot;),
+    mainPlotControlsUI(&quot;main&quot;),
+    plotSizeMarginsUI(&quot;main&quot;)))
+
+body &lt;- dashboardBody(
+    tabItems(
+        tabItem(tabName=&quot;Main&quot;, getMainPlotUI(&quot;main&quot;),
+            column(4,
+                   verbatimTextOutput(&quot;main_hover&quot;),
+                   verbatimTextOutput(&quot;main_selected&quot;)
+            )
+        )
+    )
+)
+
+ui &lt;- dashboardPage(header, sidebar, body, skin = &quot;blue&quot;)
+
+server &lt;- function(input, output, session) {
+    #Example usage with demodata
+    load(system.file(&quot;extdata&quot;, &quot;demo&quot;, &quot;demodata.Rda&quot;,
+                 package = &quot;debrowser&quot;))
+    dat &lt;-c()
+    dat$columns &lt;- c(&quot;exper_rep1&quot;, &quot;exper_rep2&quot;, &quot;exper_rep3&quot;,
+                    &quot;control_rep1&quot;, &quot;control_rep2&quot;, &quot;control_rep3&quot;)
+    dat$conds &lt;- factor( c(&quot;Control&quot;, &quot;Control&quot;, &quot;Control&quot;,
+                    &quot;Treat&quot;, &quot;Treat&quot;, &quot;Treat&quot;) )
+    dat$data &lt;- data.frame(demodata[, dat$columns])
+
+    # You can also use your dataset by reading your data from a file like below;
+    # The data in this commented out example is not supplied but these lines
+    # can give you an idea about how to read the data from a file;
+    #
+    # data  &lt;- read.table(&quot;~/Downloads/shKRAS.tsv&quot;, header=T, row.names=1, sep=&quot;\t&quot;)
+    # dat$columns &lt;- c(&quot;CNT.2&quot;, &quot;CNT.3&quot;, &quot;CNT.4&quot;,
+    #               &quot;shKRAS_T1&quot;, &quot;shKRAS_T2&quot;, &quot;shKRAS_T3&quot;)
+    # dat$conds &lt;- factor( c(&quot;Control&quot;, &quot;Control&quot;, &quot;Control&quot;,
+    #                        &quot;shKRAS&quot;, &quot;shKRAS&quot;, &quot;shKRAS&quot;) )
+    # dat$data &lt;- data.frame(data[, dat$columns])
+    #
+    xdata &lt;- generateTestData(dat)
+    selected &lt;- callModule(debrowsermainplot, &quot;main&quot;, xdata)
+
+    output$main_hover &lt;- renderPrint({
+        selected$shgClicked()
+    })
+    output$main_selected &lt;- renderPrint({
+        selected$selGenes()
+    })
+}
+shinyApp(ui, server)
+</pre></div>
+</div>
+<p>PCA plot:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">debrowser</span><span class="p">)</span>
+<span class="n">header</span> <span class="o">&lt;-</span> <span class="n">dashboardHeader</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;DEBrowser PCA Plots&quot;</span><span class="p">)</span>
+
+<span class="n">sidebar</span> <span class="o">&lt;-</span> <span class="n">dashboardSidebar</span><span class="p">(</span>
+    <span class="n">sidebarMenu</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;DataAssessment&quot;</span><span class="p">,</span>
+    <span class="n">menuItem</span><span class="p">(</span><span class="s2">&quot;PCA&quot;</span><span class="p">,</span> <span class="n">tabName</span> <span class="o">=</span> <span class="s2">&quot;PCA&quot;</span><span class="p">),</span>
+    <span class="n">menuItem</span><span class="p">(</span><span class="s2">&quot;PCA Options&quot;</span><span class="p">,</span>
+    <span class="n">pcaPlotControlsUI</span><span class="p">(</span><span class="s2">&quot;pca&quot;</span><span class="p">)),</span>
+    <span class="n">plotSizeMarginsUI</span><span class="p">(</span><span class="s2">&quot;pca&quot;</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">))</span>
+
+<span class="n">body</span> <span class="o">&lt;-</span> <span class="n">dashboardBody</span><span class="p">(</span>
+            <span class="n">tabItems</span><span class="p">(</span>
+                <span class="n">tabItem</span><span class="p">(</span><span class="n">tabName</span><span class="o">=</span><span class="s2">&quot;PCA&quot;</span><span class="p">,</span> <span class="n">getPCAPlotUI</span><span class="p">(</span><span class="s2">&quot;pca&quot;</span><span class="p">),</span>
+                    <span class="n">column</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span>
+                        <span class="n">verbatimTextOutput</span><span class="p">(</span><span class="s2">&quot;pca_hover&quot;</span><span class="p">),</span>
+                        <span class="n">verbatimTextOutput</span><span class="p">(</span><span class="s2">&quot;pca_selected&quot;</span><span class="p">)</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+<span class="n">ui</span> <span class="o">&lt;-</span> <span class="n">shinydashboard</span><span class="p">::</span><span class="n">dashboardPage</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">sidebar</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">skin</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+
+<span class="n">server</span> <span class="o">&lt;-</span> <span class="n">function</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">session</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">load</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s2">&quot;extdata&quot;</span><span class="p">,</span> <span class="s2">&quot;demo&quot;</span><span class="p">,</span> <span class="s2">&quot;demodata.Rda&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s2">&quot;debrowser&quot;</span><span class="p">))</span>
+    <span class="n">selected</span> <span class="o">&lt;-</span> <span class="n">callModule</span><span class="p">(</span><span class="n">debrowserpcaplot</span><span class="p">,</span> <span class="s2">&quot;pca&quot;</span><span class="p">,</span> <span class="n">demodata</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">shinyApp</span><span class="p">(</span><span class="n">ui</span><span class="p">,</span> <span class="n">server</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>All2All Plot:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(debrowser)
+options(warn =-1)
+header &lt;- dashboardHeader( title = &quot;DEBrowser All2All Plots&quot;)
+sidebar &lt;- dashboardSidebar(  sidebarMenu(id=&quot;DEAnlysis&quot;,
+    menuItem(&quot;All2All&quot;, tabName = &quot;All2All&quot;),
+    plotSizeMarginsUI(&quot;all2all&quot;, h=800, w=800),
+    all2allControlsUI(&quot;all2all&quot;)
+    )
+)
+
+body &lt;- dashboardBody(
+        tabItems(
+            tabItem(tabName=&quot;All2All&quot;,
+                fluidRow(column(12,getAll2AllPlotUI(&quot;all2all&quot;)))
+            )
+        )
+    )
+
+ui &lt;- dashboardPage(header, sidebar, body, skin = &quot;blue&quot;)
+
+server &lt;- function(input, output, session) {
+    load(system.file(&quot;extdata&quot;, &quot;demo&quot;, &quot;demodata.Rda&quot;,package = &quot;debrowser&quot;))
+    observe({
+        callModule(debrowserall2all, &quot;all2all&quot;, demodata, input$cex)
+    })
+    }
+
+shinyApp(ui, server)
+</pre></div>
+</div>
+<p>Batch Effect Module:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(debrowser)
+
+options(warn =-1)
+source(&quot;../../R/batcheffect.R&quot;)
+source(&quot;../../R/funcs.R&quot;)
+header &lt;- dashboardHeader(title = &quot;DEBrowser Batch Effect&quot;)
+sidebar &lt;- dashboardSidebar(sidebarMenu(id=&quot;DataPrep&quot;,
+    menuItem(&quot;BatchEffect&quot;, tabName = &quot;BatchEffect&quot;)
+    )
+)
+body &lt;- dashboardBody(
+    tabItems(
+        tabItem(tabName=&quot;BatchEffect&quot;, batchEffectUI(&quot;batcheffect&quot;),
+            column(4,
+                   verbatimTextOutput(&quot;batcheffecttable&quot;)
+            )
+        )
+    )
+)
+
+ui &lt;- dashboardPage(header, sidebar, body, skin = &quot;blue&quot;)
+
+server &lt;- function(input, output, session) {
+    load(system.file(&quot;extdata&quot;, &quot;demo&quot;, &quot;demodata.Rda&quot;, package = &quot;debrowser&quot;))
+    ldata &lt;- reactiveValues(count=NULL, meta=NULL)
+    ldata$count &lt;- demodata
+    ldata$meta &lt;- metadatatable
+    data &lt;- callModule(debrowserbatcheffect, &quot;batcheffect&quot;, ldata)
+    observe({
+        output$batcheffecttable &lt;- renderPrint({
+            head( data$BatchEffect()$count )
+        })
+    })
+}
+
+shinyApp(ui, server)
+</pre></div>
+</div>
+<p>Main Box plot:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(debrowser)
+library(plotly)
+source(&quot;../../R/boxmain.R&quot;)
+options(warn =-1)
+
+header &lt;- dashboardHeader(title = &quot;DEBrowser Box Plots&quot;)
+sidebar &lt;- dashboardSidebar(  sidebarMenu(id=&quot;DEAnlysis&quot;,
+    menuItem(&quot;BoxMain&quot;, tabName = &quot;BoxMain&quot;),
+    textInput(&quot;genename&quot;, &quot;Gene/Region Name&quot;, value = &quot;Foxa3&quot; ),
+    plotSizeMarginsUI(&quot;boxmain&quot;, h=400, t = 30)
+    )
+)
+
+body &lt;- dashboardBody(
+    tabItems(
+        tabItem(tabName=&quot;BoxMain&quot;,
+            fluidRow(column(12,getBoxMainPlotUI(&quot;boxmain&quot;)))
+        )
+    )
+)
+ui &lt;- dashboardPage(header, sidebar, body, skin = &quot;blue&quot;)
+
+server &lt;- function(input, output, session) {
+    load(system.file(&quot;extdata&quot;, &quot;demo&quot;, &quot;demodata.Rda&quot;, package = &quot;debrowser&quot;))
+observe({
+    if (!is.null(input$genename))
+        callModule(debrowserboxmainplot, &quot;boxmain&quot;, demodata, metadatatable$sample, metadatatable$treatment, input$genename)
+    })
+}
+
+shinyApp(ui, server)
+</pre></div>
+</div>
+<p>Density Plot:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(debrowser)
+options(warn =-1)
+
+header &lt;- dashboardHeader(title = &quot;DEBrowser Density Plots&quot; )
+sidebar &lt;- dashboardSidebar(  sidebarMenu(id=&quot;DataAssessment&quot;,
+    menuItem(&quot;Density&quot;, tabName = &quot;Density&quot;),
+    textInput(&quot;maxCutoff&quot;, &quot;Max Cutoff&quot;, value = &quot;10&quot; ),
+    plotSizeMarginsUI(&quot;density&quot;, h=400),
+    plotSizeMarginsUI(&quot;afterFiltering&quot;, h=400)
+    )
+)
+
+body &lt;- dashboardBody(
+    tabItems(
+        tabItem(tabName=&quot;Density&quot;,
+            fluidRow(column(12,getDensityPlotUI(&quot;density&quot;))),
+            fluidRow(column(12,getDensityPlotUI(&quot;afterFiltering&quot;)))
+        )
+    )
+)
+
+ui &lt;- dashboardPage(header, sidebar, body, skin = &quot;blue&quot;)
+
+server &lt;- function(input, output, session) {
+    load(system.file(&quot;extdata&quot;, &quot;demo&quot;, &quot;demodata.Rda&quot;, package = &quot;debrowser&quot;))
+    filtd &lt;- reactive({
+    # Filter out the rows that has maximum 100 reads in a sample
+    subset(demodata, apply(demodata, 1, max, na.rm = TRUE)  &gt;=  as.numeric(input$maxCutoff))
+    })
+    observe({
+        if(!is.null(filtd())){
+            callModule(debrowserdensityplot, &quot;density&quot;, demodata)
+            callModule(debrowserdensityplot, &quot;afterFiltering&quot;, filtd())
+        }
+    })
+}
+shinyApp(ui, server)
+</pre></div>
+</div>
+<p>Heatmap Module:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(debrowser)
+library(DESeq2)
+library(heatmaply)
+library(RColorBrewer)
+library(gplots)
+source(&quot;../../R/heatmap.R&quot;)
+options(warn=-1)
+header &lt;- dashboardHeader(title = &quot;DEBrowser Heatmap&quot;)
+sidebar &lt;- dashboardSidebar( getJSLine(), sidebarMenu(id=&quot;DataAssessment&quot;,
+    menuItem(&quot;Heatmap&quot;, tabName = &quot;Heatmap&quot;),
+    plotSizeMarginsUI(&quot;heatmap&quot;),
+    heatmapControlsUI(&quot;heatmap&quot;))
+)
+
+body &lt;- dashboardBody(
+    tabItems(
+        tabItem(tabName=&quot;Heatmap&quot;,  getHeatmapUI(&quot;heatmap&quot;),
+            column(4,
+                   verbatimTextOutput(&quot;heatmap_hover&quot;),
+                   verbatimTextOutput(&quot;heatmap_selected&quot;)
+            )
+        )
+    )
+)
+
+ui &lt;- dashboardPage(header, sidebar, body, skin = &quot;blue&quot;)
+
+server &lt;- function(input, output, session) {
+    load(system.file(&quot;extdata&quot;, &quot;demo&quot;, &quot;demodata.Rda&quot;, package = &quot;debrowser&quot;))
+    insulinSignalingGenes &lt;- reactive({
+        genes &lt;-  c(&quot;Prkar2a&quot;, &quot;Tsc1&quot;, &quot;Mapk8&quot;, &quot;Sos1&quot;, &quot;Pik3r1&quot;, &quot;Srebf1&quot;,
+                    &quot;Insr&quot;, &quot;Fasn&quot;, &quot;Ppp1r3b&quot;, &quot;Pik3r3&quot;, &quot;Ptprf&quot;, &quot;Pklr&quot;,
+                    &quot;Irs2&quot;, &quot;Socs4&quot;, &quot;Eif4ebp1&quot;, &quot;Ppp1r3c&quot;, &quot;Pygl&quot;, &quot;Socs2&quot;,
+                    &quot;Cbl&quot;,&quot;Acaca&quot;, &quot;Crkl&quot;)
+        normDat &lt;- getNormalizedMatrix(demodata, method = &quot;MRN&quot;)
+        normDat[genes, ]
+    })
+    selected &lt;- reactiveVal()
+    observe({
+        withProgress(message = &#39;Creating plot&#39;, style = &quot;notification&quot;, value = 0.1,
+        { selected(callModule(debrowserheatmap, &quot;heatmap&quot;, insulinSignalingGenes())) }
+        )
+    })
+    output$heatmap_hover &lt;- renderPrint({
+        if (!is.null(selected()) &amp;&amp; !is.null(selected()$shgClicked()) &amp;&amp;
+            selected()$shgClicked() != &quot;&quot;)
+            return(paste0(&quot;Clicked: &quot;,selected()$shgClicked()))
+        else
+            return(paste0(&quot;Hovered:&quot;, selected()$shg()))
+    })
+    output$heatmap_selected &lt;- renderPrint({
+        if (!is.null(selected()))
+            selected()$selGenes()
+    })
+}
+shinyApp(ui, server)
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../future/future.html" class="btn btn-neutral float-right" title="DEBrowser Additions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../heatmap/heatmap.html" class="btn btn-neutral" title="Heatmaps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Alper Kucukural, Manuel Garber, Onur Yukselen.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.1.10',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
