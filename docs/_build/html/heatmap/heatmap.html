@@ -1,0 +1,379 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Heatmaps &mdash; DEBrowser 1.1.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="DEBrowser 1.1.10 documentation" href="../index.html"/>
+        <link rel="next" title="DEBrowser Modules" href="../modules/modules.html"/>
+        <link rel="prev" title="DE Analysis" href="../deseq/deseq.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DEBrowser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quickstart/quickstart.html">Quick-start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/local.html">Local Install Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deseq/deseq.html">DE Analysis</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Heatmaps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#used-clustering-and-linkage-methods-in-heatmap">Used clustering and linkage methods in heatmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#used-distance-methods-in-heatmap">Used distance methods in heatmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interactive-heatmap">Interactive Heatmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-heatmap-of-de-analysis">The Heatmap of DE Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/modules.html">DEBrowser Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../future/future.html">DEBrowser Additions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/examples.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DEBrowser</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Heatmaps</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/heatmap/heatmap.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="heatmaps">
+<h1>Heatmaps<a class="headerlink" href="#heatmaps" title="Permalink to this headline">¶</a></h1>
+<p>The heatmap is a great way to analyze replicate results of genes all in
+one simple plot.  Users have the option to change the clustering method used
+as well as the distance method used to display their heatmap.  In addition,
+you can also change the size of the heatmap produced and adjust the p-adjust
+and fold change cut off for this plot as well.</p>
+<div class="section" id="used-clustering-and-linkage-methods-in-heatmap">
+<h2>Used clustering and linkage methods in heatmap<a class="headerlink" href="#used-clustering-and-linkage-methods-in-heatmap" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>complete:</strong></dt>
+<dd>Complete-linkage clustering is one of the linkage method used in hierarchical clustering.
+In each step of clustering, closest cluster pairs are always merged up to a specified distance threshold. Distance between clusters for complete link clustering is the maximum of
+the distances between the members of the clusters.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>ward D2:</strong></dt>
+<dd>Ward method aims to find compact and spherical clusters. The distance between two clusters
+is calculated by the sum of squared deviations from points to centroids. “ward.D2” method uses
+criterion (Murtagh and Legendre 2014) to minimize ward clustering method. The only difference
+ward.D2 and ward is the dissimilarities from ward method squared before cluster updating. This
+method tends to be sensitive to the outliers.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>single:</strong></dt>
+<dd>Distance between clusters for single linkage is the minimum of  the distances between
+the members of the clusters.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>average:</strong></dt>
+<dd>Distance between clusters for average linkage is the average of the distances between
+the members of the clusters.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>mcquitty:</strong></dt>
+<dd>mcquitty linkage is when two clusters are joined, the distance of the new cluster
+to any other cluster is calculated by the average of the distances of the soon to be
+joined clusters to that other cluster.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>median:</strong></dt>
+<dd>This is a different averaging method that uses the median instead of the mean.
+It is used to reduce the effect of outliers.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>centroid:</strong></dt>
+<dd>The distance between cluster pairs is defined as the Euclidean distance
+between their centroids or means.</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="used-distance-methods-in-heatmap">
+<h2>Used distance methods in heatmap<a class="headerlink" href="#used-distance-methods-in-heatmap" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>cor:</strong></dt>
+<dd>1 - cor(x) are used to define the dissimilarity between samples. It is less
+sensitive to the outliers and scaling.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>euclidean:</strong></dt>
+<dd>It is the most common use of distance. It is sensitive to the outliers and scaling.
+It is defined as the square root of the sum of the square differences between gene counts.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>maximum:</strong></dt>
+<dd>The maximum distance between two samples is the sum of the maximum expression value of the
+corresponding genes.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>manhattan:</strong></dt>
+<dd>The Manhattan distance between two samples is the sum of the differences of their
+corresponding genes.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>canberra:</strong></dt>
+<dd>Canberra distance is similar to the Manhattan distance and it is a special form of
+the Minkowski distance. The difference is that the absolute difference between the
+gene counts of the two genes is divided by the sum of the absolute counts
+prior to summing.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>minkowsky:</strong></dt>
+<dd>It is generalized form of euclidean distance.</dd>
+</dl>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For distances other than ‘cor’, the distance function defined will be ( 1 - (the correlation between samples)).</p>
+</div>
+<p>For additional information about the clustering methods you can consult <a class="reference external" href="https://www.inside-r.org/r-doc/stats/hclust">this website</a> and for distance methods <a class="reference external" href="https://www.inside-r.org/r-doc/stats/dist">here</a>.</p>
+</div>
+<div class="section" id="interactive-heatmap">
+<h2>Interactive Heatmap<a class="headerlink" href="#interactive-heatmap" title="Permalink to this headline">¶</a></h2>
+<p>You can also select to view an interactive version of the heatmap by clicking
+on the ‘Interactive’ checkbox on the left panel under the height and width
+options.  Selecting this feature changes the heatmap into an interactive
+version with two colors, allowing you to select specific genes to be compared
+within the GO term plots.</p>
+<p>Just like in the Main Plots, you can click and drag to create a selection.  To select a specific portion of the heatmap, make sure
+to highlight the middle of the heatmap gene box in order to fully select a specific gene.  This selection can be used later within the
+GO Term plots for specific queries on your selection.</p>
+<a class="reference internal image-reference" href="../_images/interactive_heatmap.png"><img alt="../_images/interactive_heatmap.png" class="align-center" src="../_images/interactive_heatmap.png" style="width: 99%;" /></a>
+<ol class="upperalpha simple">
+<li>Before Selection B. Selection of area with zoom tool C. Zoomed heatmap region which allows better viewing resolution.</li>
+</ol>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last"><strong>Interactive Feature:</strong> In order to increase the performance of the generating heatmaps, <strong>interactive</strong> option is disabled by default. After deciding plotting/clustering parameters of the heatmap, you might activate this feature to investigate each block in detail.</p>
+</div>
+</div>
+<div class="section" id="the-heatmap-of-de-analysis">
+<h2>The Heatmap of DE Analysis<a class="headerlink" href="#the-heatmap-of-de-analysis" title="Permalink to this headline">¶</a></h2>
+<p>Once you’ve selected a specific region on Main Plots (Scatter, Volcano or MA plot), a new heatmap of the selected area will appear just next to your plot. If you want to hide some groups (such as Up, Down or NS based on DE analysis), just click on the group label on the top right part of the figure. In this way, you can select a specific part of the genes by <strong>lasso select</strong> or <strong>box select</strong> tools that includes only <strong>Up</strong> or <strong>Down</strong> Regulated genes. As soon as you completed your selection, heatmap will be created simultaneously.</p>
+<a class="reference internal image-reference" href="../_images/main_plot_selection.png"><img alt="../_images/main_plot_selection.png" class="align-center" src="../_images/main_plot_selection.png" style="width: 99%;" /></a>
+<p><strong>A.</strong> Box Selection, <strong>B.</strong> Lasso Selection, <strong>C.</strong> Created heatmap based on selection</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">We strongly recommend normalization before plotting heatmaps. To normalize, please change the parameters that are located under: <strong>Select Plot options -&gt; Normalization Methods</strong> and select the method from the dropdown box.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../modules/modules.html" class="btn btn-neutral float-right" title="DEBrowser Modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../deseq/deseq.html" class="btn btn-neutral" title="DE Analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Alper Kucukural, Manuel Garber, Onur Yukselen.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.1.10',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

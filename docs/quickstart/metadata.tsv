@@ -1,0 +1,7 @@
+sample	batch	condition
+exper_rep1  1   A
+exper_rep2  2   A
+exper_rep3  1   A
+control_rep1    2   B
+control_rep2    1   B
+control_rep3    2   B
