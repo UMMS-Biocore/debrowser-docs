@@ -32,6 +32,6 @@ To start **Go Term** analysis, it is important to select correct organism from *
 
 How to download selected data from Main plots/QC Plots/Heatmaps?
 ================================================================
-In the left sidebar, you need to choose **The plot used in selection** field under **Select Plot Options** and click **Download Data** button. If you wish to see the selected data, you can click **Tables** tab. 
+First, you need to choose **Choose dataset** field as **selected** under **Data Options** in the left sidebar. When you select this option, new field: **The plot used in selection** will appear under **Choose dataset** field. You need to specify the plot you are interested from following options: Main plot, Main Heatmap, QC Heatmap. Finally you can click **Download Data** button to download data, or if you wish to see the selected data, you can click **Tables** tab. 
 
 
