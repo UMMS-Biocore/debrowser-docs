@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Frequently asked questions (FAQ) &mdash; DEBrowser 1.1.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="DEBrowser 1.1.10 documentation" href="../index.html"/>
+        <link rel="prev" title="Examples" href="../examples/examples.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DEBrowser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quickstart/quickstart.html">Quick-start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/local.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deseq/deseq.html">DE Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../heatmap/heatmap.html">Heatmaps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/modules.html">DEBrowser Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../future/future.html">DEBrowser Additions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Frequently asked questions (FAQ)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#why-un-normalized-counts">Why un-normalized counts?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-am-i-getting-error-while-uploading-files">Why am I getting error while uploading files?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-some-columns-not-showed-up-after-upload">Why some columns not showed up after upload?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-i-cannot-upload-excel-files">Why I cannot upload Excel files?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-can-t-i-see-all-the-background-data-in-main-plots">Why can’t I see all the background data in Main Plots?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-am-i-getting-error-when-i-click-on-de-genes-in-go-term-analysis">Why am I getting error when I click on <strong>DE Genes</strong> in Go Term Analysis?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-download-selected-data-from-main-plots-qc-plots-heatmaps">How to download selected data from Main plots/QC Plots/Heatmaps?</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DEBrowser</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Frequently asked questions (FAQ)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/faq/faq.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="frequently-asked-questions-faq">
+<h1>Frequently asked questions (FAQ)<a class="headerlink" href="#frequently-asked-questions-faq" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="why-un-normalized-counts">
+<h2>Why un-normalized counts?<a class="headerlink" href="#why-un-normalized-counts" title="Permalink to this headline">¶</a></h2>
+<p>DESeq2 requires count data as input obtained from RNA-Seq or another high-thorughput sequencing experiment in the form of matrix values. Here we convert un-integer values to integer to be able to run DESeq2. The matrix values should be un-normalized, since DESeq2 model internally corrects for library size. So, transformed or normalized values such as counts scaled by library size should not be used as input. Please use edgeR or limma for normalized counts.</p>
+</div>
+<div class="section" id="why-am-i-getting-error-while-uploading-files">
+<h2>Why am I getting error while uploading files?<a class="headerlink" href="#why-am-i-getting-error-while-uploading-files" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>DEBrowser supports tab, comma or semi-colon separated files. However spaces or characters in numeric regions not supoorted and causes an error while uploading files. It is crutial to remove for these kind of instances from the files before uploading files.</li>
+<li>Another reason of getting an error is using same gene name multiple times. This may occurs after opening files in programs such as Excel, which tends to automatically convert some gene names to dates (eg. SEP9 to SEP.09.2018). This leads numerous problems therefore you need to disable these kind of automatic conversion before opening files in these kind of programs.</li>
+</ul>
+</div>
+<div class="section" id="why-some-columns-not-showed-up-after-upload">
+<h2>Why some columns not showed up after upload?<a class="headerlink" href="#why-some-columns-not-showed-up-after-upload" title="Permalink to this headline">¶</a></h2>
+<p>If a character in numeric area or space is exist in one of your column, either column will be eliminated or you will get an error. Therefore it is crutial to remove for these kind of instances from your files before uploading.</p>
+</div>
+<div class="section" id="why-i-cannot-upload-excel-files">
+<h2>Why I cannot upload Excel files?<a class="headerlink" href="#why-i-cannot-upload-excel-files" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Excel like programs creates DOS/Windows line-ending characters (^M) which leads to an error. Therefore it is crutial to remove for these kind of instances from your files before uploading.</li>
+<li>Another reason of getting an error is using same gene name multiple times. This may occurs after opening files in programs such as Excel, which tends to automatically convert some gene names to dates (eg. SEP9 to SEP.09.2018). Therefore you need to disable these kind of automatic conversion before opening files in these kind of programs.</li>
+</ul>
+</div>
+<div class="section" id="why-can-t-i-see-all-the-background-data-in-main-plots">
+<h2>Why can’t I see all the background data in Main Plots?<a class="headerlink" href="#why-can-t-i-see-all-the-background-data-in-main-plots" title="Permalink to this headline">¶</a></h2>
+<p>In order to increase the performance, by default 10% of non-significant(NS) genes are used to generate plots. We strongly suggest you to use all of the NS genes in your plots while publishing your results. You can easily change this parameter by clicking <strong>Main Options</strong> button and change Background Data(%) to 100% on the left sidebar.</p>
+</div>
+<div class="section" id="why-am-i-getting-error-when-i-click-on-de-genes-in-go-term-analysis">
+<h2>Why am I getting error when I click on <strong>DE Genes</strong> in Go Term Analysis?<a class="headerlink" href="#why-am-i-getting-error-when-i-click-on-de-genes-in-go-term-analysis" title="Permalink to this headline">¶</a></h2>
+<p>To start <strong>Go Term</strong> analysis, it is important to select correct organism from <strong>Choose an organism</strong> field. After selecting other desired parameters, you can click <strong>Submit</strong> button to run Go Term analysis. After this stage, you will able to see <strong>categories</strong> regarding to your selected gene list in the <strong>Table</strong> Tab. Once you select this category, you can click DE Genes button to see gene list regarding to selected category.</p>
+</div>
+<div class="section" id="how-to-download-selected-data-from-main-plots-qc-plots-heatmaps">
+<h2>How to download selected data from Main plots/QC Plots/Heatmaps?<a class="headerlink" href="#how-to-download-selected-data-from-main-plots-qc-plots-heatmaps" title="Permalink to this headline">¶</a></h2>
+<p>In the left sidebar, you need to choose <strong>The plot used in selection</strong> field under <strong>Select Plot Options</strong> and click <strong>Download Data</strong> button. If you wish to see the selected data, you can click <strong>Tables</strong> tab.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../examples/examples.html" class="btn btn-neutral" title="Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Alper Kucukural, Manuel Garber, Onur Yukselen.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.1.10',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
