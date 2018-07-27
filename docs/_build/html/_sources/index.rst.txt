@@ -18,6 +18,7 @@ Contents:
    modules/modules
    future/future
    /examples/examples
+   /faq/faq
 
 Indices and tables
 ==================

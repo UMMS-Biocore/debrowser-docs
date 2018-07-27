@@ -36,7 +36,7 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="DEBrowser 1.1.10 documentation" href="../index.html"/>
-        <link rel="next" title="Local Install Guide" href="../local/local.html"/>
+        <link rel="next" title="Installation Guide" href="../local/local.html"/>
         <link rel="prev" title="Welcome to DEBrowser’s documentation!" href="../index.html"/> 
 
   
@@ -104,12 +104,13 @@
 <li class="toctree-l2"><a class="reference internal" href="#id4">Autoload Data via Hyperlink</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../local/local.html">Local Install Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/local.html">Installation Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../deseq/deseq.html">DE Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../heatmap/heatmap.html">Heatmaps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules/modules.html">DEBrowser Modules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../future/future.html">DEBrowser Additions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/faq.html">Frequently asked questions (FAQ)</a></li>
 </ul>
 
             
@@ -178,24 +179,25 @@
 <p>This guide is walkthrough for the DEBrowser from start to finish.</p>
 <div class="section" id="getting-started">
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
-<p>First off, we need to head to the DEBrowser webpage at this url:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">debrowser</span><span class="o">.</span><span class="n">umassmed</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span>
+<p>First off, we need to install R package of DEBrowser from bioconductor:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span><span class="p">(</span><span class="s2">&quot;https://bioconductor.org/biocLite.R&quot;</span><span class="p">)</span>
+<span class="n">biocLite</span><span class="p">(</span><span class="s2">&quot;debrowser&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Alternatively, if you have the R package installed, you can call these R commands:</p>
+<p>One you have installed the R package, you can call these R commands:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">debrowser</span><span class="p">)</span>
 <span class="n">startDEBrowser</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">For more information on installing DEBrowser locally, please consult our <a class="reference external" href="http://debrowser.readthedocs.io/en/latest/local/local.html">Local Install Guide</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For more information on installing DEBrowser locally, please consult our <a class="reference external" href="http://debrowser.readthedocs.io/en/latest/local/local.html">Installation Guide</a>.</p>
 </div>
 <p>Once you’ve made your way to the website, or you have a local instance of DEBrowser running, you will be greeted with data loading section:</p>
 <img alt="../_images/data_load.png" class="align-center" src="../_images/data_load.png" />
 <p>To begin the analysis, you need to upload your <em>count data file</em> (comma or semicolon separated (CSV), and tab separated (TSV) format) to be analyzed and choose appropiate separator for the file (comma, semicolon or tab).</p>
 <p>If you do not have a dataset to upload, you can use the built in demo data file by clicking on the ‘Load Demo (Vernia et al.)!’ button.  To view the entire demo data file, you can download
-this <a class="reference external" href="https://bioinfo.umassmed.edu/pub/debrowser/simple_demo.tsv">demo set</a>.  For an example case study, try our <a class="reference external" href="https://bioinfo.umassmed.edu/pub/debrowser/advanced_demo.tsv">advanced demo</a>.</p>
+this <a class="reference external" href="https://bioinfo.umassmed.edu/pub/debrowser/simple_demo.tsv">demo set</a>. For another example, try our <a class="reference external" href="https://bioinfo.umassmed.edu/pub/debrowser/advanced_demo.tsv">full dataset (Vernia et. al)</a> .</p>
 <p>The structure of the count data files are shown below:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -243,7 +245,7 @@ this <a class="reference external" href="https://bioinfo.umassmed.edu/pub/debrow
 <p class="first admonition-title">Tip</p>
 <p class="last">DEBrowser also accepts count data files via hyperlink, for more information please see the <a class="reference external" href="quickstart.html#autoload-data-via-hyperlink">autoload data via hyperlink</a> section.</p>
 </div>
-<p>In addition to the count data file; you need to upload metadata file to correct for batch effects or any other normalizing conditions you might want to address that might be within your results. To handle for these conditions, simply create a metadata file by using the example table at below or download sample file from <a class="reference external" href="https://raw.githubusercontent.com/onuryukselen/debrowser/develop/docs/quickstart/metadata.tsv">this link</a>.</p>
+<p>In addition to the count data file; you need to upload metadata file to correct for batch effects or any other normalizing conditions you might want to address that might be within your results. To handle for these conditions, simply create a metadata file by using the example table at below or download sample file from <a class="reference external" href="https://bioinfo.umassmed.edu/pub/debrowser/simple_demo_meta.txt">this link</a>.</p>
 <p>Once the count data and metadata files have been loaded in Debrowser, you can click upload button to visualize your data as shown at below:</p>
 <img alt="../_images/upload_summary.png" class="align-center" src="../_images/upload_summary.png" />
 <p>After loading the gene quantification file, and if specified the metadata file containing your batch correction fields, you then have the option to filter low counts and conduct batch effect correction prior to your analysis. Alternatively you may skip these steps and directly continue with differential expression analysis or view quality control (QC) information of your dataset.</p>
@@ -507,7 +509,7 @@ link.</a>.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../local/local.html" class="btn btn-neutral float-right" title="Local Install Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../local/local.html" class="btn btn-neutral float-right" title="Installation Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral" title="Welcome to DEBrowser’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -7,18 +7,19 @@ This guide is walkthrough for the DEBrowser from start to finish.
 Getting Started
 ===============
 
-First off, we need to head to the DEBrowser webpage at this url::
+First off, we need to install R package of DEBrowser from bioconductor::
 
-	https://debrowser.umassmed.edu/
+    source("https://bioconductor.org/biocLite.R")
+    biocLite("debrowser")
 
-Alternatively, if you have the R package installed, you can call these R commands::
+One you have installed the R package, you can call these R commands::
 
 	library(debrowser)
 	startDEBrowser()
 
-.. tip::
+.. note::
 
-	For more information on installing DEBrowser locally, please consult our `Local Install Guide <http://debrowser.readthedocs.io/en/latest/local/local.html>`_.
+	For more information on installing DEBrowser locally, please consult our `Installation Guide <http://debrowser.readthedocs.io/en/latest/local/local.html>`_.
 
 Once you've made your way to the website, or you have a local instance of DEBrowser running, you will be greeted with data loading section:
 
@@ -28,11 +29,11 @@ Once you've made your way to the website, or you have a local instance of DEBrow
 To begin the analysis, you need to upload your *count data file* (comma or semicolon separated (CSV), and tab separated (TSV) format) to be analyzed and choose appropiate separator for the file (comma, semicolon or tab).
 
 If you do not have a dataset to upload, you can use the built in demo data file by clicking on the 'Load Demo (Vernia et al.)!' button.  To view the entire demo data file, you can download
-this `demo set`_.  For an example case study, try our `advanced demo`_.
+this `demo set`_. For another example, try our `full dataset (Vernia et. al)`_ .
 
 .. _demo set: https://bioinfo.umassmed.edu/pub/debrowser/simple_demo.tsv
 
-.. _advanced demo: https://bioinfo.umassmed.edu/pub/debrowser/advanced_demo.tsv
+.. _full dataset (Vernia et. al): https://bioinfo.umassmed.edu/pub/debrowser/advanced_demo.tsv
 
 The structure of the count data files are shown below:
 
@@ -48,7 +49,7 @@ AK028  uc011   2.00   1.29   0.00   0.00
 
 	DEBrowser also accepts count data files via hyperlink, for more information please see the `autoload data via hyperlink <quickstart.html#autoload-data-via-hyperlink>`_ section.
 
-In addition to the count data file; you need to upload metadata file to correct for batch effects or any other normalizing conditions you might want to address that might be within your results. To handle for these conditions, simply create a metadata file by using the example table at below or download sample file from `this link <https://raw.githubusercontent.com/onuryukselen/debrowser/develop/docs/quickstart/metadata.tsv>`_.
+In addition to the count data file; you need to upload metadata file to correct for batch effects or any other normalizing conditions you might want to address that might be within your results. To handle for these conditions, simply create a metadata file by using the example table at below or download sample file from `this link <https://bioinfo.umassmed.edu/pub/debrowser/simple_demo_meta.txt>`_.
 
 Once the count data and metadata files have been loaded in Debrowser, you can click upload button to visualize your data as shown at below:
 
