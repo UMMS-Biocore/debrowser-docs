@@ -16,9 +16,9 @@ Why some columns not showed up after upload?
 ============================================
 If a character in numeric area or space is exist in one of your column, either column will be eliminated or you will get an error. Therefore it is crutial to remove for these kind of instances from your files before uploading.
 
-Why I cannot upload Excel files?
-================================
-* Excel like programs creates DOS/Windows line-ending characters (^M) which leads to an error. Therefore it is crutial to remove for these kind of instances from your files before uploading.
+Why am I getting error while uploading CSV/TSV files exported from Excel?
+=========================================================================
+* Excel like programs creates DOS/Windows line-ending characters (^M) when saved as CSV or TSV (comma or tab separated formats) which leads to an error. Therefore it is crutial to remove for these kind of instances from your files before uploading.
 
 * Another reason of getting an error is using same gene name multiple times. This may occurs after opening files in programs such as Excel, which tends to automatically convert some gene names to dates (eg. SEP9 to SEP.09.2018). Therefore you need to disable these kind of automatic conversion before opening files in these kind of programs.
 
