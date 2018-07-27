@@ -39,7 +39,7 @@ QC plots without Batch Effect Correction
     * **All2All - Plot Options:** Following options are selected and their screenshots are shown at below.
 
         * **Plot Type:** All2All
-        * **Select Plot Options:** Choose a dataset: all-detected
+        * **Data Options:** Choose a dataset: all-detected
         * **QC options - all2all - Size & Margins:** Check the box of the **Plot Size** and adjust width and height as 800 and 800, respectively.
         * **QC options - all2all - Options:**  corr font size: 1.8 (adjust the font size of the text inside the box)
 
@@ -58,7 +58,7 @@ QC plots without Batch Effect Correction
 
         * **Plot Type:** Heatmap
         * **Heatmap Colors:** Check the box of custom colors.
-        * **Select Plot Options:** Choose a dataset: most varied, top-n:1000, total min count:100 (to show the top 1000 most varied genes (based on coefficient of variance) whose total counts are higher than 100)
+        * **Data Options:** Choose a dataset: most varied, top-n:1000, total min count:100 (to show the top 1000 most varied genes (based on coefficient of variance) whose total counts are higher than 100)
         * **QC options - kmeans:** Check the box of kmeans clustering. Select 7 as # of clusters. You might need to change the order of the clusters and click **change order** button to get gradual changes on heatmap as in the figure.
         * **QC options - heatmap - Size & Margins:** Check the box of the **Plot Size** and adjust width and height to 690 and 1200, respectively.
         
@@ -100,7 +100,7 @@ Since we finalized out plots without applying batch effect correction, we can re
     * **All2All - Plot Options:**
 
         * **Plot Type:** All2All
-        * **Select Plot Options:** Choose a dataset: all-detected
+        * **Data Options:** Choose a dataset: all-detected
         * **QC options - all2all - Size & Margins:** Check the box of the **Plot Size** and adjust width and height to 800 and 800, respectively.
         * **QC options - all2all - Options:**  corr font size: 1.8 
         
@@ -118,7 +118,7 @@ Since we finalized out plots without applying batch effect correction, we can re
 
         * **Plot Type:** Heatmap
         * **Heatmap Colors:** Check the box of custom colors.
-        * **Select Plot Options:** Choose a dataset: most varied, top-n:1000, total min count:100 (to show the top 1000 most varied genes (based on coefficient of variance) whose total counts are higher than 100)
+        * **Data Options:** Choose a dataset: most varied, top-n:1000, total min count:100 (to show the top 1000 most varied genes (based on coefficient of variance) whose total counts are higher than 100)
         * **QC options - kmeans:** Check the box of kmeans clustering. Select 7 as # of clusters. You might need to change the order of the clusters and click **change order** button to get gradual changes on heatmap as in the figure.
         * **QC options - heatmap - Size & Margins:** Check the box of the **Plot Size** and adjust width and height to 690 and 1200, respectively.
         
@@ -166,7 +166,7 @@ The Differential Expression Plots
        :align: center
        :width: 99%
        
-    If you want to mark FABP3 gene on the plot, click on Select Plot Options and enter **FABP3** in to the **search field** as showed below. You will see green mark on the plot that shows FABP3.
+    If you want to mark FABP3 gene on the plot, click on Data Options and enter **FABP3** in to the **search field** as showed below. You will see green mark on the plot that shows FABP3.
     
     .. image:: ../debrowser_pics2/example_scatter_search.png
        :align: center
@@ -186,7 +186,7 @@ The Differential Expression Plots
        :align: center
        :width: 99%
     
-    8) **Scatter plot of the genes enriched in insulin signalling pathway:** In this example, we will highlight genes enriched in insulin signalling pathway. If you already hid NS genes, you can show them by clicking on the **NS** label at the upper right side of the figure. Click on the **Select Plot Options** and enter following genes in to the **search field**:: 
+    8) **Scatter plot of the genes enriched in insulin signalling pathway:** In this example, we will highlight genes enriched in insulin signalling pathway. If you already hid NS genes, you can show them by clicking on the **NS** label at the upper right side of the figure. Click on the **Data Options** and enter following genes in to the **search field**:: 
     
         Cbl
         Sos1
@@ -237,7 +237,7 @@ The Differential Expression Plots
     
     Since the data is not normalized, data of exper_rep3 looks like it belongs to control group. We strongly recommend normalization before plotting subset of genes. To normalize, please change the parameters as described below and see the updated figure at below:
     
-    * **Select Plot options -> Normalization Methods:** Please select **MRN** from the dropdown box.
+    * **Data options -> Normalization Methods:** Please select **MRN** from the dropdown box.
     
     .. image:: ../debrowser_pics2/example_scatter_insulin_B.png
        :align: center

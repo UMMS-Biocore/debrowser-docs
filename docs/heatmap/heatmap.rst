@@ -118,6 +118,6 @@ Once you've selected a specific region on Main Plots (Scatter, Volcano or MA plo
 
 .. tip::
 
-    We strongly recommend normalization before plotting heatmaps. To normalize, please change the parameters that are located under: **Select Plot options -> Normalization Methods** and select the method from the dropdown box.
+    We strongly recommend normalization before plotting heatmaps. To normalize, please change the parameters that are located under: **Data options -> Normalization Methods** and select the method from the dropdown box.
 
 

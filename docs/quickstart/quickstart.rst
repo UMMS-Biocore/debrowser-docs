@@ -51,6 +51,26 @@ AK028  uc011   2.00   1.29   0.00   0.00
 
 In addition to the count data file; you need to upload metadata file to correct for batch effects or any other normalizing conditions you might want to address that might be within your results. To handle for these conditions, simply create a metadata file by using the example table at below or download sample file from `this link <https://bioinfo.umassmed.edu/pub/debrowser/simple_demo_meta.txt>`_.
 
+============  =====  =========
+sample        batch  condition
+============  =====  =========
+exper_rep1    1      A        
+exper_rep2    2      A        
+exper_rep3    1      A        
+control_rep1  2      B        
+control_rep2  1      B        
+control_rep3  2      B        
+============  =====  =========
+
+Metadata file can be formatted with comma, semicolon or tab separators similar to count data files. These files used to establish different batch effects for multiple conditions.
+You can have as many conditions as you may require, as long as all of the samples are present. 
+
+.. note::
+
+    The example above would result in the first set of conditions as ``exper_rep1``, ``exper_rep2``, ``exper_rep3`` from ``A`` and second set of conditions as ``control_rep1``, ``control_rep2``, ``control_rep3`` from ``B`` as they correspond to those conditions in the ``condition`` column.
+
+    In the same way, 'batch' would have the first set as ``exper_rep1``, ``exper_rep3``, ``control_rep2`` from ``1`` and second set as ``exper_rep2``, ``control_rep1``, ``control_rep3`` from ``2`` as they correspond to those conditions in the ``batch`` column.
+
 Once the count data and metadata files have been loaded in Debrowser, you can click upload button to visualize your data as shown at below:
 
 .. image:: ../debrowser_pics2/upload_summary.png
@@ -60,6 +80,29 @@ After loading the gene quantification file, and if specified the metadata file c
 
 Low Count Filtering
 ===================
+
+In this section, you can simultaneously visualise the changes of your dataset while filtering out the low count genes. Choose your filtration criteria from **Filtering Methods** box which is located just center of the screen. Three methods are available to be used:
+
+	* **Max:** Filters out genes where maximum count for each gene across all samples are less than defined threshold. 
+	* **Mean:** Filters out genes where mean count for each gene are less than defined threshold. 
+	* **CPM:**	First, counts per million (CPM) is calculated as the raw counts divided by the library sizes and multiplied by one million. Then it filters out genes where at least defined number of samples is less than defined CPM threshold.
+
+After selection of filtering methods and entering threshold value, you can proceed by clicking **Filter** button which is located just bottom part of the **Filtering Methods** box. On the right part of the screen, your filtered dataset will be visualized for comparison as shown at figure below. 
+
+.. image:: ../debrowser_pics2/filtering.png
+	:align: center
+	:width: 99%
+
+You can easily compare following features, before and after filtering: 
+
+	* Number of genes/regions.
+	* Read counts for each sample.
+	* Overall histogram of the dataset.
+	* gene/region vs samples data 
+
+.. important::
+
+	To investigate the gene/region vs samples data in detail as shown at below, you may click the **Show Data** button, located bottom part of the data tables. Alternatively, you may download all filtered data by clicking **Download** button which located next to **Show Data** button.  
 
 .. image:: ../debrowser_pics2/show_data.png
 	:align: center
@@ -172,7 +215,7 @@ You also have a wide array of options when it comes to fold change cut-off level
     .. image:: ../debrowser_pics2/selected_conditions.png
 	   :align: center
 
-After DE analysis, you can always download the results in CSV format by clicking the **Download Data** button located under the **Select Plot Options**. You can also download the plot or graphs by clicking on the **download** button at top of each plot or graph.
+After DE analysis, you can always download the results in CSV format by clicking the **Download Data** button located under the **Data Options**. You can also download the plot or graphs by clicking on the **download** button at top of each plot or graph.
 
 The Heatmap of DE Analysis
 ==========================
@@ -187,7 +230,7 @@ Once you've selected a specific region on Main Plots (Scatter, Volcano or MA plo
 
 .. tip::
 
-    We strongly recommend normalization before plotting heatmaps. To normalize, please change the parameters that are located under: **Select Plot options -> Normalization Methods** and select the method from the dropdown box.
+    We strongly recommend normalization before plotting heatmaps. To normalize, please change the parameters that are located under: **Data options -> Normalization Methods** and select the method from the dropdown box.
 
 
 GO Term Plots
@@ -232,7 +275,7 @@ for the results to show on screen!
 Data Tables
 ===========
 
-The lasttab at the top of the screen displays various different data tables.
+The last tab at the top of the screen displays various different data tables.
 These datatables include:
 
 * All Detected
