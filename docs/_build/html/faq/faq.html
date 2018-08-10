@@ -101,7 +101,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#why-un-normalized-counts">Why un-normalized counts?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-am-i-getting-error-while-uploading-files">Why am I getting error while uploading files?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-some-columns-not-showed-up-after-upload">Why some columns not showed up after upload?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#why-i-cannot-upload-excel-files">Why I cannot upload Excel files?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-am-i-getting-error-while-uploading-csv-tsv-files-exported-from-excel">Why am I getting error while uploading CSV/TSV files exported from Excel?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-can-t-i-see-all-the-background-data-in-main-plots">Why can’t I see all the background data in Main Plots?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-am-i-getting-error-when-i-click-on-de-genes-in-go-term-analysis">Why am I getting error when I click on <strong>DE Genes</strong> in Go Term Analysis?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-download-selected-data-from-main-plots-qc-plots-heatmaps">How to download selected data from Main plots/QC Plots/Heatmaps?</a></li>
@@ -179,19 +179,19 @@
 <div class="section" id="why-am-i-getting-error-while-uploading-files">
 <h2>Why am I getting error while uploading files?<a class="headerlink" href="#why-am-i-getting-error-while-uploading-files" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>DEBrowser supports tab, comma or semi-colon separated files. However spaces or characters in numeric regions not supoorted and causes an error while uploading files. It is crutial to remove for these kind of instances from the files before uploading files.</li>
+<li>DEBrowser supports tab, comma or semi-colon separated files. However spaces or characters in numeric regions not supported and causes an error while uploading files. It is crutial to remove these kind of instances from the files before uploading files.</li>
 <li>Another reason of getting an error is using same gene name multiple times. This may occurs after opening files in programs such as Excel, which tends to automatically convert some gene names to dates (eg. SEP9 to SEP.09.2018). This leads numerous problems therefore you need to disable these kind of automatic conversion before opening files in these kind of programs.</li>
+<li>Some files contain both tab and space as an delimiter which lead to error. It is required to be cleaned from these kind of files before loading.</li>
 </ul>
 </div>
 <div class="section" id="why-some-columns-not-showed-up-after-upload">
 <h2>Why some columns not showed up after upload?<a class="headerlink" href="#why-some-columns-not-showed-up-after-upload" title="Permalink to this headline">¶</a></h2>
 <p>If a character in numeric area or space is exist in one of your column, either column will be eliminated or you will get an error. Therefore it is crutial to remove for these kind of instances from your files before uploading.</p>
 </div>
-<div class="section" id="why-i-cannot-upload-excel-files">
-<h2>Why I cannot upload Excel files?<a class="headerlink" href="#why-i-cannot-upload-excel-files" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="why-am-i-getting-error-while-uploading-csv-tsv-files-exported-from-excel">
+<h2>Why am I getting error while uploading CSV/TSV files exported from Excel?<a class="headerlink" href="#why-am-i-getting-error-while-uploading-csv-tsv-files-exported-from-excel" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Excel like programs creates DOS/Windows line-ending characters (^M) which leads to an error. Therefore it is crutial to remove for these kind of instances from your files before uploading.</li>
-<li>Another reason of getting an error is using same gene name multiple times. This may occurs after opening files in programs such as Excel, which tends to automatically convert some gene names to dates (eg. SEP9 to SEP.09.2018). Therefore you need to disable these kind of automatic conversion before opening files in these kind of programs.</li>
+<li>You might getting an error, because of using same gene name multiple times. This may occurs after opening files in programs such as Excel, which tends to automatically convert some gene names to dates (eg. SEP9 to SEP.09.2018). Therefore you need to disable these kind of automatic conversion before opening files in these kind of programs.</li>
 </ul>
 </div>
 <div class="section" id="why-can-t-i-see-all-the-background-data-in-main-plots">
@@ -204,7 +204,7 @@
 </div>
 <div class="section" id="how-to-download-selected-data-from-main-plots-qc-plots-heatmaps">
 <h2>How to download selected data from Main plots/QC Plots/Heatmaps?<a class="headerlink" href="#how-to-download-selected-data-from-main-plots-qc-plots-heatmaps" title="Permalink to this headline">¶</a></h2>
-<p>In the left sidebar, you need to choose <strong>The plot used in selection</strong> field under <strong>Select Plot Options</strong> and click <strong>Download Data</strong> button. If you wish to see the selected data, you can click <strong>Tables</strong> tab.</p>
+<p>First, you need to choose <strong>Choose dataset</strong> field as <strong>selected</strong> under <strong>Data Options</strong> in the left sidebar. When you select this option, new field: <strong>The plot used in selection</strong> will appear under <strong>Choose dataset</strong> field. You need to specify the plot you are interested from following options: Main plot, Main Heatmap, QC Heatmap. Finally you can click <strong>Download Data</strong> button to download data, or if you wish to see the selected data, you can click <strong>Tables</strong> tab.</p>
 </div>
 </div>
 

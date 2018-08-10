@@ -13,10 +13,16 @@ openssl-devel, libxml2-devel, libcurl-devel, libpng-devel)
 
 You can install DEBrowser from bioconductor or from the source code. Install the required dependencies by running the following commands in R or RStudio. 
 
-**A. Bioconductor Installation**::
+**A.1 Bioconductor Installation** (Recommended)::
 
     source("https://www.bioconductor.org/biocLite.R")
     biocLite("debrowser")
+
+**A.2 Bioconductor Installation - Developerment Version**::
+    
+    if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+    BiocManager::install("debrowser", version = "devel")
 
 **B. Installation instructions from source code**::
 

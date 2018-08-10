@@ -92,7 +92,7 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../quickstart/quickstart.html">Quick-start Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../local/local.html">Local Install Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/local.html">Installation Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../deseq/deseq.html">DE Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../heatmap/heatmap.html">Heatmaps</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">DEBrowser Modules</a><ul>
@@ -102,6 +102,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../future/future.html">DEBrowser Additions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/faq.html">Frequently asked questions (FAQ)</a></li>
 </ul>
 
             
@@ -239,8 +240,6 @@ shinyApp(ui, server)
 <p>Main Plots:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(plotly)
 library(debrowser)
-source(&quot;../../R/mainScatter.R&quot;)
-
 header &lt;- dashboardHeader(title = &quot;DEBrowser Main Plots&quot;)
 sidebar &lt;- dashboardSidebar(  sidebarMenu(id=&quot;DEAnalysis&quot;,
     menuItem(&quot;Main&quot;, tabName = &quot;Main&quot;),
@@ -361,10 +360,7 @@ shinyApp(ui, server)
 </div>
 <p>Batch Effect Module:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(debrowser)
-
 options(warn =-1)
-source(&quot;../../R/batcheffect.R&quot;)
-source(&quot;../../R/funcs.R&quot;)
 header &lt;- dashboardHeader(title = &quot;DEBrowser Batch Effect&quot;)
 sidebar &lt;- dashboardSidebar(sidebarMenu(id=&quot;DataPrep&quot;,
     menuItem(&quot;BatchEffect&quot;, tabName = &quot;BatchEffect&quot;)
@@ -401,7 +397,6 @@ shinyApp(ui, server)
 <p>Main Box plot:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(debrowser)
 library(plotly)
-source(&quot;../../R/boxmain.R&quot;)
 options(warn =-1)
 
 header &lt;- dashboardHeader(title = &quot;DEBrowser Box Plots&quot;)
@@ -435,7 +430,6 @@ shinyApp(ui, server)
 <p>Density Plot:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(debrowser)
 options(warn =-1)
-
 header &lt;- dashboardHeader(title = &quot;DEBrowser Density Plots&quot; )
 sidebar &lt;- dashboardSidebar(  sidebarMenu(id=&quot;DataAssessment&quot;,
     menuItem(&quot;Density&quot;, tabName = &quot;Density&quot;),
@@ -478,7 +472,6 @@ library(DESeq2)
 library(heatmaply)
 library(RColorBrewer)
 library(gplots)
-source(&quot;../../R/heatmap.R&quot;)
 options(warn=-1)
 header &lt;- dashboardHeader(title = &quot;DEBrowser Heatmap&quot;)
 sidebar &lt;- dashboardSidebar( getJSLine(), sidebarMenu(id=&quot;DataAssessment&quot;,
