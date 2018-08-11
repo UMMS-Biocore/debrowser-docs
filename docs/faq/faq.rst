@@ -8,19 +8,19 @@ DESeq2 requires count data as input obtained from RNA-Seq or another high-thorug
 
 Why am I getting error while uploading files? 
 =============================================
-* DEBrowser supports tab, comma or semi-colon separated files. However spaces or characters in numeric regions not supoorted and causes an error while uploading files. It is crutial to remove for these kind of instances from the files before uploading files.  
+* DEBrowser supports tab, comma or semi-colon separated files. However spaces or characters in numeric regions not supported and causes an error while uploading files. It is crutial to remove these kind of instances from the files before uploading files.  
 
 * Another reason of getting an error is using same gene name multiple times. This may occurs after opening files in programs such as Excel, which tends to automatically convert some gene names to dates (eg. SEP9 to SEP.09.2018). This leads numerous problems therefore you need to disable these kind of automatic conversion before opening files in these kind of programs.
+
+* Some files contain both tab and space as an delimiter which lead to error. It is required to be cleaned from these kind of files before loading.
 
 Why some columns not showed up after upload?
 ============================================
 If a character in numeric area or space is exist in one of your column, either column will be eliminated or you will get an error. Therefore it is crutial to remove for these kind of instances from your files before uploading.
 
-Why I cannot upload Excel files?
-================================
-* Excel like programs creates DOS/Windows line-ending characters (^M) which leads to an error. Therefore it is crutial to remove for these kind of instances from your files before uploading.
-
-* Another reason of getting an error is using same gene name multiple times. This may occurs after opening files in programs such as Excel, which tends to automatically convert some gene names to dates (eg. SEP9 to SEP.09.2018). Therefore you need to disable these kind of automatic conversion before opening files in these kind of programs.
+Why am I getting error while uploading CSV/TSV files exported from Excel?
+=========================================================================
+* You might getting an error, because of using same gene name multiple times. This may occurs after opening files in programs such as Excel, which tends to automatically convert some gene names to dates (eg. SEP9 to SEP.09.2018). Therefore you need to disable these kind of automatic conversion before opening files in these kind of programs.
 
 Why can't I see all the background data in Main Plots?
 ======================================================

@@ -36,6 +36,7 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="DEBrowser 1.1.10 documentation" href="../index.html"/>
+        <link rel="next" title="Frequently asked questions (FAQ)" href="../faq/faq.html"/>
         <link rel="prev" title="DEBrowser Additions" href="../future/future.html"/> 
 
   
@@ -91,7 +92,7 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../quickstart/quickstart.html">Quick-start Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../local/local.html">Local Install Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/local.html">Installation Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../deseq/deseq.html">DE Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../heatmap/heatmap.html">Heatmaps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules/modules.html">DEBrowser Modules</a></li>
@@ -101,8 +102,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#qc-plots-after-batch-effect-correction">QC plots after Batch Effect Correction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-differential-expression-plots">The Differential Expression Plots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#go-term-plots">GO Term Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#log2-fold-change-comparison-for-ppar-pathway">Log2 fold change comparison for PPARα pathway</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/faq.html">Frequently asked questions (FAQ)</a></li>
 </ul>
 
             
@@ -206,7 +209,7 @@
 <blockquote>
 <div><ul class="simple">
 <li><strong>Plot Type:</strong> All2All</li>
-<li><strong>Select Plot Options:</strong> Choose a dataset: all-detected</li>
+<li><strong>Data Options:</strong> Choose a dataset: all-detected</li>
 <li><strong>QC options - all2all - Size &amp; Margins:</strong> Check the box of the <strong>Plot Size</strong> and adjust width and height as 800 and 800, respectively.</li>
 <li><strong>QC options - all2all - Options:</strong>  corr font size: 1.8 (adjust the font size of the text inside the box)</li>
 </ul>
@@ -224,7 +227,7 @@
 <div><ul class="simple">
 <li><strong>Plot Type:</strong> Heatmap</li>
 <li><strong>Heatmap Colors:</strong> Check the box of custom colors.</li>
-<li><strong>Select Plot Options:</strong> Choose a dataset: most varied, top-n:1000, total min count:100 (to show the top 1000 most varied genes (based on coefficient of variance) whose total counts are higher than 100)</li>
+<li><strong>Data Options:</strong> Choose a dataset: most varied, top-n:1000, total min count:100 (to show the top 1000 most varied genes (based on coefficient of variance) whose total counts are higher than 100)</li>
 <li><strong>QC options - kmeans:</strong> Check the box of kmeans clustering. Select 7 as # of clusters. You might need to change the order of the clusters and click <strong>change order</strong> button to get gradual changes on heatmap as in the figure.</li>
 <li><strong>QC options - heatmap - Size &amp; Margins:</strong> Check the box of the <strong>Plot Size</strong> and adjust width and height to 690 and 1200, respectively.</li>
 </ul>
@@ -236,7 +239,7 @@
 </div>
 <div class="section" id="qc-plots-after-batch-effect-correction">
 <h2>QC plots after Batch Effect Correction<a class="headerlink" href="#qc-plots-after-batch-effect-correction" title="Permalink to this headline">¶</a></h2>
-<p>Since we finalized out plots without applying batch effect correction, we can return back to batch effect correction step and change the <strong>Correction Method</strong> as <strong>Combat</strong> and continue to create new graphs with the same parameters as we used before. To make it more user friendly, we gonna start explain these steps from the beginning. If you choose to continue from batch effect correction, please skip first two steps and continue reading from 3rd step: <strong>Batch Effect Correction and Normalization</strong>.</p>
+<p>Since we finalized out plots without applying batch effect correction, we can return back to batch effect correction step and change the <strong>Correction Method</strong> as <strong>Combat</strong> and continue to create new graphs with the same parameters as we used before. To make it more user friendly, we are going to start explain these steps from the beginning. If you choose to continue from batch effect correction, please skip first two steps and continue reading from 3rd step: <strong>Batch Effect Correction and Normalization</strong>.</p>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first"><strong>Upload Data:</strong> To begin the analysis, load Demo Data by clicking <strong>Load Demo (Donnard et al)!</strong> button. Then click on <strong>Filter</strong> button to start <strong>Low Count Filtering</strong>.</p>
@@ -273,7 +276,7 @@
 <blockquote>
 <div><ul class="simple">
 <li><strong>Plot Type:</strong> All2All</li>
-<li><strong>Select Plot Options:</strong> Choose a dataset: all-detected</li>
+<li><strong>Data Options:</strong> Choose a dataset: all-detected</li>
 <li><strong>QC options - all2all - Size &amp; Margins:</strong> Check the box of the <strong>Plot Size</strong> and adjust width and height to 800 and 800, respectively.</li>
 <li><strong>QC options - all2all - Options:</strong>  corr font size: 1.8</li>
 </ul>
@@ -291,7 +294,7 @@
 <div><ul class="simple">
 <li><strong>Plot Type:</strong> Heatmap</li>
 <li><strong>Heatmap Colors:</strong> Check the box of custom colors.</li>
-<li><strong>Select Plot Options:</strong> Choose a dataset: most varied, top-n:1000, total min count:100 (to show the top 1000 most varied genes (based on coefficient of variance) whose total counts are higher than 100)</li>
+<li><strong>Data Options:</strong> Choose a dataset: most varied, top-n:1000, total min count:100 (to show the top 1000 most varied genes (based on coefficient of variance) whose total counts are higher than 100)</li>
 <li><strong>QC options - kmeans:</strong> Check the box of kmeans clustering. Select 7 as # of clusters. You might need to change the order of the clusters and click <strong>change order</strong> button to get gradual changes on heatmap as in the figure.</li>
 <li><strong>QC options - heatmap - Size &amp; Margins:</strong> Check the box of the <strong>Plot Size</strong> and adjust width and height to 690 and 1200, respectively.</li>
 </ul>
@@ -309,7 +312,7 @@
 </li>
 <li><p class="first"><strong>Low Count Filtering:</strong> Select <strong>Max</strong> method with cutoff 10 (which filter genes where maximum count for each gene across all samples are less than 10), then click <strong>Filter</strong> button which is located at the center of the page. Proceed to next step by clicking <strong>Batch Effect Correction</strong> button.</p>
 </li>
-<li><p class="first"><strong>Batch Effect Correction and Normalization:</strong>  We gonna skip both normalization and batch effect correction by selecting following options:</p>
+<li><p class="first"><strong>Batch Effect Correction and Normalization:</strong>  We are going to skip both normalization and batch effect correction by selecting following options:</p>
 <blockquote>
 <div><ul class="simple">
 <li><strong>Normalization method:</strong> None</li>
@@ -339,7 +342,7 @@
 <li><strong>Read count plots:</strong> Lets return back to <strong>Scatter Plot</strong> by using <strong>Plot Type</strong> section. You can hover on each point on the graph to see their read counts as a bar graph as shown at below. In this example FABP3 is selected to show the high variance of this gene across samples.</li>
 </ol>
 <a class="reference internal image-reference" href="../_images/example_scatter_hover.png"><img alt="../_images/example_scatter_hover.png" class="align-center" src="../_images/example_scatter_hover.png" style="width: 99%;" /></a>
-<p>If you want to mark FABP3 gene on the plot, click on Select Plot Options and enter <strong>FABP3</strong> in to the <strong>search field</strong> as showed below. You will see green mark on the plot that shows FABP3.</p>
+<p>If you want to mark FABP3 gene on the plot, click on Data Options and enter <strong>FABP3</strong> in to the <strong>search field</strong> as showed below. You will see green mark on the plot that shows FABP3.</p>
 <a class="reference internal image-reference" href="../_images/example_scatter_search.png"><img alt="../_images/example_scatter_search.png" class="align-center" src="../_images/example_scatter_search.png" style="width: 30%;" /></a>
 <ol class="arabic simple" start="7">
 <li><strong>Lasso selection:</strong> DEBrowser can draw heatmaps of any selected region of any main plot. Selection can be made in a rectangular form or as a free-form using plotly’s lasso select. To do so, first click <strong>NS</strong> label at the upper right side of the figure, and hide non-significant genes. Then click on lasso select button at the top of the plot and select the genes you’re interested as shown at below. Heatmap will appear just next to scatter plot. Additionally, you can activate interactive mapping option for heatmap by clicking <strong>Interactive</strong> button under <strong>Heatmap Options</strong> on the left sidebar menu. Now, you can hover on the each block of heatmap to see gene name and its value.</li>
@@ -351,7 +354,7 @@
 <a class="reference internal image-reference" href="../_images/example_scatter_lasso.png"><img alt="../_images/example_scatter_lasso.png" class="align-center" src="../_images/example_scatter_lasso.png" style="width: 60%;" /></a>
 <a class="reference internal image-reference" href="../_images/example_scatter_lasso_heatmap.png"><img alt="../_images/example_scatter_lasso_heatmap.png" class="align-center" src="../_images/example_scatter_lasso_heatmap.png" style="width: 99%;" /></a>
 <ol class="arabic" start="8">
-<li><p class="first"><strong>Scatter plot of the genes enriched in insulin signalling pathway:</strong> In this example, we will highlight genes enriched in insulin signalling pathway. If you already hid NS genes, you can show them by clicking on the <strong>NS</strong> label at the upper right side of the figure. Click on the <strong>Select Plot Options</strong> and enter following genes in to the <strong>search field</strong>:</p>
+<li><p class="first"><strong>Scatter plot of the genes enriched in insulin signalling pathway:</strong> In this example, we will highlight genes enriched in insulin signalling pathway. If you already hid NS genes, you can show them by clicking on the <strong>NS</strong> label at the upper right side of the figure. Click on the <strong>Data Options</strong> and enter following genes in to the <strong>search field</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Cbl</span>
 <span class="n">Sos1</span>
 <span class="n">Irs2</span>
@@ -394,7 +397,7 @@
 </div></blockquote>
 <p>Since the data is not normalized, data of exper_rep3 looks like it belongs to control group. We strongly recommend normalization before plotting subset of genes. To normalize, please change the parameters as described below and see the updated figure at below:</p>
 <ul class="simple">
-<li><strong>Select Plot options -&gt; Normalization Methods:</strong> Please select <strong>MRN</strong> from the dropdown box.</li>
+<li><strong>Data options -&gt; Normalization Methods:</strong> Please select <strong>MRN</strong> from the dropdown box.</li>
 </ul>
 <a class="reference internal image-reference" href="../_images/example_scatter_insulin_B.png"><img alt="../_images/example_scatter_insulin_B.png" class="align-center" src="../_images/example_scatter_insulin_B.png" style="width: 60%;" /></a>
 </div></blockquote>
@@ -422,6 +425,176 @@ left option panel.</p>
 <p>Once you have adjusted all of your parameters, you may hit the submit button in the top right and then wait
 for the results to show on screen!</p>
 </div>
+<div class="section" id="log2-fold-change-comparison-for-ppar-pathway">
+<h2>Log2 fold change comparison for PPARα pathway<a class="headerlink" href="#log2-fold-change-comparison-for-ppar-pathway" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
+<li><strong>Upload Data:</strong> To begin the analysis, download <a class="reference external" href="https://bioinfo.umassmed.edu/pub/debrowser/advanced_demo.tsv">full dataset (Vernia et. al)</a> and <a class="reference external" href="https://bioinfo.umassmed.edu/pub/debrowser/advanced_meta.tsv">full metadata</a> on your computer. Then click <strong>browse</strong> button, and select downloaded files from your computer. Please keep <strong>Separator</strong> as <strong>Tab</strong> while this processes. Finally click <strong>upload</strong> button to see <strong>Upload Summary</strong>. Now you can click on <strong>Filter</strong> button to start <strong>Low Count Filtering</strong>.</li>
+</ol>
+<ol class="arabic" start="2">
+<li><p class="first"><strong>Low Count Filtering:</strong> Select <strong>Max</strong> method with cutoff 10 (which filter genes where maximum count for each gene across all samples are less than 10), then click <strong>Filter</strong> button which is located at the center of the page. We are going to skip normalization and batch effect correction step by clicking ‘Go to DE Analysis’ button.</p>
+</li>
+<li><p class="first"><strong>DE Analysis:</strong>  In this page, we will add multiple groups for comparison. Click on <strong>Add New Comparison</strong> button and select <strong>Select Meta</strong> as <strong>Cond1</strong>. Repeat this step for <strong>Cond2</strong> and <strong>Cond3</strong> and add two more comparisons. It will automatically separate experiment and control data into two groups. You can leave other parameters as default as listed below and click “Submit” button.</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>DE method:</strong> DESeq2</li>
+<li><strong>Fit Type:</strong> parametric</li>
+<li><strong>betaPrior:</strong> FALSE</li>
+<li><strong>Test Type:</strong> Wald</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/example_multi_cond.png"><img alt="../_images/example_multi_cond.png" class="align-center" src="../_images/example_multi_cond.png" style="width: 70%;" /></a>
+<ol class="arabic" start="4">
+<li><p class="first"><strong>Downloading fold2Change data of selected genes</strong>: Upon finishing the DE analysis, you will see DE Results in table format. Please click on <strong>Go to Main Plots!</strong> button which will open <strong>Scatter Plot</strong>. On the left sidebar menu, click <a href="#id1"><span class="problematic" id="id2">**</span></a>Data options* tab and enter following genes regarding to PPARα pathway:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Cyp4a12b</span>
+<span class="n">Cyp4a14</span>
+<span class="n">Ehhadh</span>
+<span class="n">Cyp8b1</span>
+<span class="n">Cpt1b</span>
+<span class="n">Cyp7b1</span>
+<span class="n">Slc27a1</span>
+<span class="n">Apoa5</span>
+<span class="n">Pdpk1</span>
+<span class="n">Apoa1</span>
+<span class="n">Acadl</span>
+<span class="n">Fads2</span>
+<span class="n">Fabp4</span>
+<span class="n">Acadm</span>
+<span class="n">Apoa2</span>
+<span class="n">Apoc3</span>
+<span class="n">Fgf21</span>
+<span class="n">Fabp5</span>
+<span class="n">Fabp3</span>
+<span class="n">Lpl</span>
+<span class="n">Dbi</span>
+<span class="n">Nr1h3</span>
+<span class="n">Fabp7</span>
+<span class="n">Ppara</span>
+<span class="n">Ucp1</span>
+<span class="n">Sdc1</span>
+<span class="n">Sdc3</span>
+<span class="n">Sdc2</span>
+<span class="n">Fabp2</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Afterwards, select <strong>comparison</strong> option for the <strong>Choose a dataset</strong> field. This option will add fold change columns to to our data.</p>
+<p>Now, we need to disable filtration to get all searched genes in our dataset. To do so, enter following parameters into <strong>Filter</strong> field on the left sidebar menu.</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>padj:</strong> 1</li>
+<li><strong>foldChange:</strong> 1</li>
+</ul>
+</div></blockquote>
+<p>To confirm you can check all adjusted parameters at image below.</p>
+<a class="reference internal image-reference" href="../_images/example_fold_selection.png"><img alt="../_images/example_fold_selection.png" class="align-center" src="../_images/example_fold_selection.png" style="width: 35%;" /></a>
+<p>It is time to download our dataset by clicking <strong>Download Data</strong> button on the <strong>Data Options</strong> field. You can open downloaded tsv file in Excel or similar programs. Once you open the file, you will see columns of count data, padj and fold2Change for all comparisons. Since we are only interested in fold2Change columns, you can delete the rest. Final data file should look like image on the left at below.</p>
+<p>We will rename column names as follows and add new column called <strong>chow.wt</strong> which compares chow.wildtype with itself therefore it is filled with 1.</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>foldChange.C1.vs.C2</strong> to chow.dbl</li>
+<li><strong>foldChange.C3.vs.C4</strong> to hfd.wt</li>
+<li><strong>foldChange.C5.vs.C6</strong> to hfd.dbl</li>
+</ul>
+</div></blockquote>
+<p>To confirm you can also download the final version of the fold2data from <a class="reference external" href="https://bioinfo.umassmed.edu/pub/debrowser/comparisons.tsv">this link</a>.</p>
+<a class="reference internal image-reference" href="../_images/example_table_conversion.png"><img alt="../_images/example_table_conversion.png" class="align-center" src="../_images/example_table_conversion.png" style="width: 70%;" /></a>
+<ol class="arabic" start="5">
+<li><p class="first"><strong>Creating Heatmap for fold2change data</strong>: To create heatmap for fold change data, you have two options: A. Using startHeatmap() function or B. Use DEBrowser Heatmap module.</p>
+<blockquote>
+<div><ul>
+<li><ol class="first upperalpha">
+<li><p class="first">Open new R session and run following command in R or R Studio to run Heatmap module in web browser:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">startHeatmap</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+</ul>
+<p>Similar to DEBrowser, you can click <strong>browse</strong> button, and select prepared log2change file from your computer. Please keep <strong>Separator</strong> as <strong>Tab</strong>. Finally click <strong>upload</strong> button to see <strong>Upload Summary</strong>.</p>
+<ul>
+<li><ol class="first upperalpha" start="2">
+<li><p class="first">Open new R session and run following command in R or R Studio to load dataset as data frame (comparisons):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">comparisons</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">delim</span><span class="p">(</span><span class="s2">&quot;~/Downloads/comparisons.tsv&quot;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<blockquote>
+<div><p>You may need to change the path of the file according to your folder structure. Now, in order to open heatmap module, you need to run following script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(debrowser)
+library(DESeq2)
+library(heatmaply)
+library(RColorBrewer)
+library(gplots)
+
+options(warn=-1)
+header &lt;- dashboardHeader(title = &quot;DEBrowser Heatmap&quot;)
+sidebar &lt;- dashboardSidebar(  getJSLine(), sidebarMenu(id=&quot;DataAssessment&quot;,
+    menuItem(&quot;Heatmap&quot;, tabName = &quot;Heatmap&quot;),
+    plotSizeMarginsUI(&quot;heatmap&quot;),
+    heatmapControlsUI(&quot;heatmap&quot;)))
+body &lt;- dashboardBody(
+    tabItems(
+    tabItem(tabName=&quot;Heatmap&quot;,  getHeatmapUI(&quot;heatmap&quot;),
+        column(4, verbatimTextOutput(&quot;heatmap_hover&quot;), verbatimTextOutput(&quot;heatmap_selected&quot;)
+        )
+    )
+))
+
+ui &lt;- dashboardPage(header, sidebar, body, skin = &quot;blue&quot;)
+
+server &lt;- function(input, output, session) {
+selected &lt;- reactiveVal()
+observe({
+    withProgress(message = &#39;Creating plot&#39;, style = &quot;notification&quot;, value = 0.1, {
+    selected(callModule(debrowserheatmap, &quot;heatmap&quot;, comparisons))
+    })
+})
+output$heatmap_hover &lt;- renderPrint({
+    if (!is.null(selected()) &amp;&amp; !is.null(selected()$shgClicked()) &amp;&amp; selected()$shgClicked() != &quot;&quot;)
+        return(paste0(&quot;Clicked: &quot;,selected()$shgClicked()))
+    else
+        return(paste0(&quot;Hovered:&quot;, selected()$shg()))
+})
+output$heatmap_selected &lt;- renderPrint({
+    if (!is.null(selected()))
+        selected()$selGenes()
+})
+}
+
+shinyApp(ui, server)
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<p>Shiny will launch a web browser which is ready to use as a heatmap module. You need to specify following parameters to create log2fold change graph:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Interactive:</strong> Checked</li>
+<li><strong>Custom Colors:</strong> Checked</li>
+<li><strong>Custom Colors -&gt; Choose min colour:</strong> #33FF00</li>
+<li><strong>Custom Colors -&gt; Choose median colour:</strong> #000000</li>
+<li><strong>Custom Colors -&gt; Choose max colour:</strong> #FF0000</li>
+<li><strong>Heatmap Dendrogram -&gt; Type:</strong> none</li>
+<li><strong>Scale Options -&gt; Scale:</strong> Checked</li>
+<li><strong>Scale Options -&gt; Center:</strong> Unchecked</li>
+<li><strong>Scale Options -&gt; Log:</strong> Checked</li>
+<li><strong>Scale Options -&gt; Pseudo Count:</strong> 0</li>
+</ul>
+</div></blockquote>
+<p>Once you specify these parameters, your heatmap will be seen as image at below.</p>
+<a class="reference internal image-reference" href="../_images/example_log_heatmap.png"><img alt="../_images/example_log_heatmap.png" class="align-center" src="../_images/example_log_heatmap.png" style="width: 70%;" /></a>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -433,6 +606,8 @@ for the results to show on screen!</p>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../faq/faq.html" class="btn btn-neutral float-right" title="Frequently asked questions (FAQ)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../future/future.html" class="btn btn-neutral" title="DEBrowser Additions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

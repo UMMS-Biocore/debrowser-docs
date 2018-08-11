@@ -68,7 +68,7 @@ QC plots without Batch Effect Correction
 QC plots after Batch Effect Correction
 ======================================
 
-Since we finalized out plots without applying batch effect correction, we can return back to batch effect correction step and change the **Correction Method** as **Combat** and continue to create new graphs with the same parameters as we used before. To make it more user friendly, we gonna start explain these steps from the beginning. If you choose to continue from batch effect correction, please skip first two steps and continue reading from 3rd step: **Batch Effect Correction and Normalization**. 
+Since we finalized out plots without applying batch effect correction, we can return back to batch effect correction step and change the **Correction Method** as **Combat** and continue to create new graphs with the same parameters as we used before. To make it more user friendly, we are going to start explain these steps from the beginning. If you choose to continue from batch effect correction, please skip first two steps and continue reading from 3rd step: **Batch Effect Correction and Normalization**. 
 
     1) **Upload Data:** To begin the analysis, load Demo Data by clicking **Load Demo (Donnard et al)!** button. Then click on **Filter** button to start **Low Count Filtering**. 
     2) **Low Count Filtering:** Select **Max** method with cutoff 10 (which filter genes where maximum count for each gene across all samples are less than 10), then click **Filter** button which is located at the center of the page. After filtration, proceed to next step by clicking **Batch Effect Correction** button.
@@ -132,7 +132,7 @@ The Differential Expression Plots
 
     1) **Upload Data:** To begin the analysis, load Count Data by clicking **Load Demo (Vernia et. al)!** button. Then click on **Filter** button to start **Low Count Filtering**. 
     2) **Low Count Filtering:** Select **Max** method with cutoff 10 (which filter genes where maximum count for each gene across all samples are less than 10), then click **Filter** button which is located at the center of the page. Proceed to next step by clicking **Batch Effect Correction** button.
-    3) **Batch Effect Correction and Normalization:**  We gonna skip both normalization and batch effect correction by selecting following options: 
+    3) **Batch Effect Correction and Normalization:**  We are going to skip both normalization and batch effect correction by selecting following options: 
         
         * **Normalization method:** None
         * **Correction Method:** None
@@ -243,6 +243,8 @@ The Differential Expression Plots
        :align: center
        :width: 60%  
     
+    
+    
 
 Activating **Interactive** feature changes the heatmap into an interactive version with two colors, allowing you to select specific genes to be compared
 within the GO term plots.  
@@ -281,4 +283,169 @@ Once you have adjusted all of your parameters, you may hit the submit button in 
 for the results to show on screen!
 
 
+Log2 fold change comparison for PPARα pathway
+=============================================
+    
+    1) **Upload Data:** To begin the analysis, download `full dataset (Vernia et. al)`_ and `full metadata`_ on your computer. Then click **browse** button, and select downloaded files from your computer. Please keep **Separator** as **Tab** while this processes. Finally click **upload** button to see **Upload Summary**. Now you can click on **Filter** button to start **Low Count Filtering**.
+
+    .. _full dataset (Vernia et. al): https://bioinfo.umassmed.edu/pub/debrowser/advanced_demo.tsv
+    .. _full metadata: https://bioinfo.umassmed.edu/pub/debrowser/advanced_meta.tsv
+    
+
+    2) **Low Count Filtering:** Select **Max** method with cutoff 10 (which filter genes where maximum count for each gene across all samples are less than 10), then click **Filter** button which is located at the center of the page. We are going to skip normalization and batch effect correction step by clicking 'Go to DE Analysis' button.
+        
+    3) **DE Analysis:**  In this page, we will add multiple groups for comparison. Click on **Add New Comparison** button and select **Select Meta** as **Cond1**. Repeat this step for **Cond2** and **Cond3** and add two more comparisons. It will automatically separate experiment and control data into two groups. You can leave other parameters as default as listed below and click "Submit" button.
+    
+        * **DE method:** DESeq2
+        * **Fit Type:** parametric
+        * **betaPrior:** FALSE
+        * **Test Type:** Wald
+    
+    .. image:: ../debrowser_pics2/example_multi_cond.png
+	   :align: center
+	   :width: 70%
+    
+    4) **Downloading fold2Change data of selected genes**: Upon finishing the DE analysis, you will see DE Results in table format. Please click on **Go to Main Plots!** button which will open **Scatter Plot**. On the left sidebar menu, click **Data options* tab and enter following genes regarding to PPARα pathway::
+    
+        Cyp4a12b
+        Cyp4a14
+        Ehhadh
+        Cyp8b1
+        Cpt1b
+        Cyp7b1
+        Slc27a1
+        Apoa5
+        Pdpk1
+        Apoa1
+        Acadl
+        Fads2
+        Fabp4
+        Acadm
+        Apoa2
+        Apoc3
+        Fgf21
+        Fabp5
+        Fabp3
+        Lpl
+        Dbi
+        Nr1h3
+        Fabp7
+        Ppara
+        Ucp1
+        Sdc1
+        Sdc3
+        Sdc2
+        Fabp2
+       
+    Afterwards, select **comparison** option for the **Choose a dataset** field. This option will add fold change columns to to our data.
+    
+    Now, we need to disable filtration to get all searched genes in our dataset. To do so, enter following parameters into **Filter** field on the left sidebar menu.
+       
+        * **padj:** 1
+        * **foldChange:** 1
+       
+    To confirm you can check all adjusted parameters at image below. 
+    
+    .. image:: ../debrowser_pics2/example_fold_selection.png
+	   :align: center
+	   :width: 30%
+       
+    It is time to download our dataset by clicking **Download Data** button on the **Data Options** field. You can open downloaded tsv file in Excel or similar programs. Once you open the file, you will see columns of count data, padj and fold2Change for all comparisons. Since we are only interested in fold2Change columns, you can delete the rest. Final data file should look like image on the left at below. 
+    
+    We will rename column names as follows and add new column called **chow.wt** which compares chow.wildtype with itself therefore it is filled with 1. 
+    
+        * **foldChange.C1.vs.C2** to chow.dbl
+        * **foldChange.C3.vs.C4** to hfd.wt
+        * **foldChange.C5.vs.C6** to hfd.dbl
+        
+    To confirm you can also download the final version of the fold2data from `this link`_.
+    
+    .. _this link: https://bioinfo.umassmed.edu/pub/debrowser/comparisons.tsv
+    
+    .. image:: ../debrowser_pics2/example_table_conversion.png
+	   :align: center
+	   :width: 70%
+    
+    5) **Creating Heatmap for fold2change data**: To create heatmap for fold change data, you have two options: A. Using startHeatmap() function or B. Use DEBrowser Heatmap module.
+    
+        * A. Open new R session and run following command in R or R Studio to run Heatmap module in web browser::
+            
+                startHeatmap()
+            
+        Similar to DEBrowser, you can click **browse** button, and select prepared log2change file from your computer. Please keep **Separator** as **Tab**. Finally click **upload** button to see **Upload Summary**. 
+    
+        * B. Open new R session and run following command in R or R Studio to load dataset as data frame (comparisons)::
+    
+                comparisons <- read.delim("~/Downloads/comparisons.tsv", row.names=1)
+        
+            You may need to change the path of the file according to your folder structure. Now, in order to open heatmap module, you need to run following script::
+        
+                library(debrowser)
+                library(DESeq2)
+                library(heatmaply)
+                library(RColorBrewer)
+                library(gplots)
+                
+                options(warn=-1)
+                header <- dashboardHeader(title = "DEBrowser Heatmap")
+                sidebar <- dashboardSidebar(  getJSLine(), sidebarMenu(id="DataAssessment",
+                    menuItem("Heatmap", tabName = "Heatmap"),
+                    plotSizeMarginsUI("heatmap"),
+                    heatmapControlsUI("heatmap")))
+                body <- dashboardBody(
+                    tabItems(
+                    tabItem(tabName="Heatmap",  getHeatmapUI("heatmap"),
+                        column(4, verbatimTextOutput("heatmap_hover"), verbatimTextOutput("heatmap_selected")
+                        )
+                    )
+                ))
+            
+                ui <- dashboardPage(header, sidebar, body, skin = "blue")
+            
+                server <- function(input, output, session) {
+                selected <- reactiveVal()
+                observe({
+                    withProgress(message = 'Creating plot', style = "notification", value = 0.1, {
+                    selected(callModule(debrowserheatmap, "heatmap", comparisons))
+                    })
+                })
+                output$heatmap_hover <- renderPrint({
+                    if (!is.null(selected()) && !is.null(selected()$shgClicked()) && selected()$shgClicked() != "")
+                        return(paste0("Clicked: ",selected()$shgClicked()))
+                    else
+                        return(paste0("Hovered:", selected()$shg()))
+                })
+                output$heatmap_selected <- renderPrint({
+                    if (!is.null(selected()))
+                        selected()$selGenes()
+                })
+                }
+            
+                shinyApp(ui, server)
+        
+        
+    Shiny will launch a web browser which is ready to use as a heatmap module. You need to specify following parameters to create log2fold change graph:
+        
+            * **Interactive:** Checked
+            * **Custom Colors:** Checked
+            * **Custom Colors -> Choose min colour:** #33FF00
+            * **Custom Colors -> Choose median colour:** #000000
+            * **Custom Colors -> Choose max colour:** #FF0000
+            * **Heatmap Dendrogram -> Type:** none
+            * **Scale Options -> Scale:** Checked
+            * **Scale Options -> Center:** Unchecked
+            * **Scale Options -> Log:** Checked
+            * **Scale Options -> Pseudo Count:** 0
+            
+    Once you specify these parameters, your heatmap will be seen as image at below.
+
+    .. image:: ../debrowser_pics2/example_log_heatmap.png
+	   :align: center
+	   :width: 70%
+       
+        
+            
+            
+    
+    
 

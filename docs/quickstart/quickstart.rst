@@ -26,7 +26,7 @@ Once you've made your way to the website, or you have a local instance of DEBrow
 .. image:: ../debrowser_pics2/data_load.png
 	:align: center
 
-To begin the analysis, you need to upload your *count data file* (comma or semicolon separated (CSV), and tab separated (TSV) format) to be analyzed and choose appropiate separator for the file (comma, semicolon or tab).
+To begin the analysis, you need to upload your *count data file* (comma or semicolon separated (CSV), and tab separated (TSV) format) to be analyzed and choose appropriate separator for the file (comma, semicolon or tab).
 
 If you do not have a dataset to upload, you can use the built in demo data file by clicking on the 'Load Demo (Vernia et al.)!' button.  To view the entire demo data file, you can download
 this `demo set`_. For another example, try our `full dataset (Vernia et. al)`_ .
@@ -71,17 +71,17 @@ You can have as many conditions as you may require, as long as all of the sample
 
     In the same way, 'batch' would have the first set as ``exper_rep1``, ``exper_rep3``, ``control_rep2`` from ``1`` and second set as ``exper_rep2``, ``control_rep1``, ``control_rep3`` from ``2`` as they correspond to those conditions in the ``batch`` column.
 
-Once the count data and metadata files have been loaded in Debrowser, you can click upload button to visualize your data as shown at below:
+Once the count data and metadata files have been loaded in DEBrowser, you can click upload button to visualize your data as shown at below:
 
 .. image:: ../debrowser_pics2/upload_summary.png
 	:align: center
 
-After loading the gene quantification file, and if specified the metadata file containing your batch correction fields, you then have the option to filter low counts and conduct batch effect correction prior to your analysis. Alternatively you may skip these steps and directly continue with differential expression analysis or view quality control (QC) information of your dataset.
+After loading the gene quantification file, and if specified the metadata file containing your batch correction fields, you then have the option to filter low counts and conduct batch effect correction prior to your analysis. Alternatively, you may skip these steps and directly continue with differential expression analysis or view quality control (QC) information of your dataset.
 
 Low Count Filtering
 ===================
 
-In this section, you can simultaneously visualise the changes of your dataset while filtering out the low count genes. Choose your filtration criteria from **Filtering Methods** box which is located just center of the screen. Three methods are available to be used:
+In this section, you can simultaneously visualize the changes of your dataset while filtering out the low count genes. Choose your filtration criteria from **Filtering Methods** box which is located just center of the screen. Three methods are available to be used:
 
 	* **Max:** Filters out genes where maximum count for each gene across all samples are less than defined threshold. 
 	* **Mean:** Filters out genes where mean count for each gene are less than defined threshold. 
@@ -115,9 +115,9 @@ Batch Effect Correction and Normalization
 =========================================
 If specified metadata file containing your batch correction fields, then you have the option to conduct batch effect correction prior to your analysis. By adjusting parameters of **Options** box, you can investigate your character of your dataset. These parameters of the options box are explained as following:
 
-	* **Normalization Method:** DEBrowser allows performing normalization prior the batch effect correction. You may choose your normalization method (among MRN (Median Ratio Normalization), TMM (Trimmed Mean of M-values), RLE (Relative Log Expression) and upperquartile), or skip this step by choosing **none** for this item. For our sample data, we gonna choose MRN normalization.
+	* **Normalization Method:** DEBrowser allows performing normalization prior the batch effect correction. You may choose your normalization method (among MRN (Median Ratio Normalization), TMM (Trimmed Mean of M-values), RLE (Relative Log Expression) and upperquartile), or skip this step by choosing **none** for this item. For our sample data, we are going to choose MRN normalization.
 	* **Correction Method:** DEBrowser uses `ComBat <https://bioconductor.org/packages/release/bioc/vignettes/sva/inst/doc/sva.pdf>`_ (part of the SVA bioconductor package) or `Harman <https://www.bioconductor.org/packages/3.7/bioc/vignettes/Harman/inst/doc/IntroductionToHarman.html>`_ to adjust for possible batch effect or conditional biases. For more information, you can visit following links for documentation: `ComBat <https://bioconductor.org/packages/release/bioc/vignettes/sva/inst/doc/sva.pdf>`_, `Harman <https://www.bioconductor.org/packages/3.7/bioc/vignettes/Harman/inst/doc/IntroductionToHarman.html>`_ For our sample data, Combat correction was selected.
-	* **Treatment:** Please select the column that is specified in metadata file for comparision, such as cancer vs control. It is named *treatment* for our sample metadata.
+	* **Treatment:** Please select the column that is specified in metadata file for comparison, such as cancer vs control. It is named *treatment* for our sample metadata.
 	* **Batch:** Please select the column name in metadata file which differentiate the batches. For example in our metadata, it is called *batch*.
 
 Upon clicking submit button, comparison tables and plots will be created on the right part of the screen as shown below.
@@ -145,7 +145,7 @@ You can investigate the changes on the data by comparing following features:
 
 	You can investigate the gene/region vs samples data in detail by clicking the **Show Data** button, or download all corrected data by clicking **Download** button.
 
-Since we have completed **batch effect correction and normalization** step, we can continue with one of the following options: 'Go to DE Analysis' and ,'Go to QC plots!'. First option takes you to page where differential expression analyses are conducted with DESeq2, EdgeR or Limma. The second option, 'Go to QC plots!', takes you to a page where you can view quality control metrics of your data by PCA, All2All, Heatmap, Density, and IQR plots.
+Since we have completed **batch effect correction and normalization** step, we can continue with one of the following options: 'Go to DE Analysis' and, 'Go to QC plots!'. First option takes you to page where differential expression analyses are conducted with DESeq2, EdgeR or Limma. The second option, 'Go to QC plots!', takes you to a page where you can view quality control metrics of your data by PCA, All2All, Heatmap, Density, and IQR plots.
 
 
 DE Analysis
@@ -161,11 +161,11 @@ The first option, 'Go to DE Analysis', takes you to the next step where differen
 
     .. tip::
 
-        You can add multiple conditions to compare by clicking on "Add New Comparison" button, and view the results seperately after DE analysis.
+        You can add multiple conditions to compare by clicking on "Add New Comparison" button, and view the results separately after DE analysis.
 
     * **Method Selection:** Three DE methods are available for DEBrowser: DESeq2, EdgeR, and Limma. DESeq2 and EdgeR are designed to normalize count data from high-throughput sequencing assays such as RNA-Seq. On the other hand, Limma is a package to analyse of normalized or transformed data from microarray or RNA-Seq assays. We have selected DESeq2 for our test sample and showed the related results at below.
 
-After clicking on the 'Submit!' button, DESeq2 will analyze your comparisons and store the results into seperate data tables. It is important to note that the resulting data produced from DESeq is normalized. Upon finishing the DESeq analysis, a result table will appear which allows you to download the data by clicking "Download" button. To visualize the data with interactive plots please click on "Go to Main Plots!" button.
+After clicking on the 'Submit!' button, DESeq2 will analyze your comparisons and store the results into separate data tables. It is important to note that the resulting data produced from DESeq is normalized. Upon finishing the DESeq analysis, a result table will appear which allows you to download the data by clicking "Download" button. To visualize the data with interactive plots please click on "Go to Main Plots!" button.
 
 The Main Plots of DE Analysis
 =============================
@@ -177,7 +177,7 @@ the interactive plots.
 	:align: center
 
 
-The page will loads with **Scatter Plot**. You can switch to **Volcano Plot** and **MA Plot** by using **Plot Type** section at the left side of the menu. Since these plots are interactive, you can click to **zoom** button on the top of the graph and select the area you would like to zoom in by drawing a rectangle. Please see the plots at below:
+The page will load with **Scatter Plot**. You can switch to **Volcano Plot** and **MA Plot** by using **Plot Type** section at the left side of the menu. Since these plots are interactive, you can click to **zoom** button on the top of the graph and select the area you would like to zoom in by drawing a rectangle. Please see the plots at below:
 
     .. image:: ../debrowser_pics2/example_main_plots.png
        :align: center
@@ -187,7 +187,7 @@ The page will loads with **Scatter Plot**. You can switch to **Volcano Plot** an
 
 .. tip::
 
-    Please keep in mind that to increace the performance of the generating graph, by default 10% of non-significant(NS) genes are used to generate plots. You might show all NS genes by please click **Main Options** button and change Background Data(%) to 100% on the left sidebar.
+    Please keep in mind that to increase the performance of the generating graph, by default 10% of non-significant(NS) genes are used to generate plots. You might show all NS genes by please click **Main Options** button and change Background Data(%) to 100% on the left sidebar.
 
     .. image:: ../debrowser_pics2/example_background_data.png
        :align: center
@@ -202,7 +202,7 @@ You can hover over the scatterplot points to display more information about the 
 
 **A.** Hover on Fabp3 gene, **B.** Read Counts vs Samples, **C.** Read Counts vs Conditions
 
-You also have a wide array of options when it comes to fold change cut-off levels, padj cut-off values, which comparison set to use, and dataset of genes to analyze.
+You also have a wide array of options when it comes to fold change cut-off levels, p-adjusted (padj) cut-off values, which comparison set to use, and dataset of genes to analyze.
 
 .. image:: ../debrowser_pics2/main_plot_filters.png
 	:align: center
@@ -314,7 +314,7 @@ You can further customize and filter each specific table a multitude of ways.  F
 table dataset you would like to customize on the left panel under 'Choose a dataset' to view it's additional options.
 All of the tables have a built in search function at the top right of the table and you can further sort the table
 by column by clicking on the column header you wish to sort by.  The 'Search' box on the left panel allows for multiple searches via
-a comma-seperated list.  You can additionally use regex terms such as "^al" or "\*lm" for even more advanced searching.
+a comma-separated list.  You can additionally use regex terms such as "^al" or "\*lm" for even more advanced searching.
 This search will be applied to wherever you are within DEBrowser, including both the plots and the tables.
 
 .. tip::
@@ -325,7 +325,7 @@ This search will be applied to wherever you are within DEBrowser, including both
 ----
 
 You can also view specific tables of your input data for each type of dataset available and search for a specific geneset
-by inputting a comma-seperated list of genes or regex terms to search for in the search box within the left panel.
+by inputting a comma-separated list of genes or regex terms to search for in the search box within the left panel.
 To view these tables, you must select the tab labeled 'Tables' as well as the dataset from the dropdown menu on the left panel.
 
 .. tip::
@@ -427,7 +427,7 @@ Encoding our URL will turn it into this::
 
 	http%3A%2F%2Fdolphin.umassmed.edu%2Fpublic%2Fapi%2F%3Fsource%3Dhttp%3A%2F%2Fbioinfo.umassmed.edu%2Fpub%2Fdebrowser%2Fadvanced_demo.tsv%26format%3DJSON
 
-Now this link can be used in debrowser as::
+Now this link can be used in DEBrowser as::
 
 	https://debrowser.umassmed.edu:443/debrowser/R/
 

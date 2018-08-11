@@ -120,4 +120,16 @@ Once you've selected a specific region on Main Plots (Scatter, Volcano or MA plo
 
     We strongly recommend normalization before plotting heatmaps. To normalize, please change the parameters that are located under: **Data options -> Normalization Methods** and select the method from the dropdown box.
 
-
+The Scale Option of Heatmap
+===========================
+By using **Scale Option** field on the left sidebar menu, it is possible to adjust scaling parameters of DEBrowser. There are four main options:
+    
+    1. **Center**: If it is checked then centering is done by subtracting the column means of data from their corresponding columns. Otherwise no centering is done.(Default value:Checked)
+    2. **Scale**: The value of scale determines how column scaling is performed (after centering). If scale is checked then scaling is done by dividing the (centered) columns of the data by their standard deviations if center is checked, and the root mean square if center is unchecked. If scale is unchecked, no scaling is done.(Default value:Checked)
+    3. **Log**: The value of log determines the log2 operation of data matrix (Default value:Checked)
+    4. **Pseudo-Count**: This value added to each element to prevent getting undefined (logarithm of zero) before calculation of log2(Default value:0.1)
+    
+.. image:: ../debrowser_pics2/heatmap_scale.png
+	:align: center
+	:width: 30%
+    

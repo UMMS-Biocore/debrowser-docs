@@ -85,8 +85,6 @@ Main Plots::
 
     library(plotly)
     library(debrowser)
-    source("../../R/mainScatter.R")
-
     header <- dashboardHeader(title = "DEBrowser Main Plots")
     sidebar <- dashboardSidebar(  sidebarMenu(id="DEAnalysis",
         menuItem("Main", tabName = "Main"),
@@ -207,10 +205,7 @@ All2All Plot::
 Batch Effect Module:: 
 
     library(debrowser)
-    
     options(warn =-1)
-    source("../../R/batcheffect.R")
-    source("../../R/funcs.R")
     header <- dashboardHeader(title = "DEBrowser Batch Effect")
     sidebar <- dashboardSidebar(sidebarMenu(id="DataPrep", 
         menuItem("BatchEffect", tabName = "BatchEffect")
@@ -247,7 +242,6 @@ Main Box plot::
 
     library(debrowser)
     library(plotly)
-    source("../../R/boxmain.R")
     options(warn =-1)
 
     header <- dashboardHeader(title = "DEBrowser Box Plots")
@@ -281,7 +275,6 @@ Density Plot::
 
     library(debrowser)
     options(warn =-1)
-
     header <- dashboardHeader(title = "DEBrowser Density Plots" )
     sidebar <- dashboardSidebar(  sidebarMenu(id="DataAssessment",
         menuItem("Density", tabName = "Density"),
@@ -325,7 +318,6 @@ Heatmap Module::
     library(heatmaply)
     library(RColorBrewer)
     library(gplots)
-    source("../../R/heatmap.R")
     options(warn=-1)
     header <- dashboardHeader(title = "DEBrowser Heatmap")
     sidebar <- dashboardSidebar( getJSLine(), sidebarMenu(id="DataAssessment",
