@@ -8,8 +8,14 @@ machine.
 
 Before you start;
 First, you will have to install R and/or RStudio.
-(On Fedora/Red Hat/CentOS, these packages have to be installed;
-openssl-devel, libxml2-devel, libcurl-devel, libpng-devel)
+
+On Fedora/Red Hat/CentOS, these packages have to be installed::
+    
+    openssl-devel, libxml2-devel, libcurl-devel, libpng-devel
+
+On Ubuntu 18.04 LTS, you can install required packages by following command::
+
+    sudo apt-get install libcurl4-openssl-dev libssl-dev libv8-3.14-dev udunits-bin libudunits2-* libxml2-dev 
 
 You can install DEBrowser from bioconductor or from the source code. Install the required dependencies by running the following commands in R or RStudio. 
 
