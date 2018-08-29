@@ -2,10 +2,6 @@
 Installation Guide
 ******************
 
-
-Running these simple commands will launch the DEBrowser within your local
-machine.
-
 Before you start; you will have to install R and/or RStudio.
 You can install DEBrowser from bioconductor or from the source code. Install the required dependencies by running the following commands in R or RStudio. 
 Please check *Operating System Dependencies* section, in case your operating system requires packages to be installed.
