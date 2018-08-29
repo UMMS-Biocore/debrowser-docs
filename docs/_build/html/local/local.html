@@ -92,7 +92,10 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../quickstart/quickstart.html">Quick-start Guide</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#operating-system-dependencies">Operating System Dependencies</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../deseq/deseq.html">DE Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../heatmap/heatmap.html">Heatmaps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules/modules.html">DEBrowser Modules</a></li>
@@ -166,17 +169,15 @@
 <h1>Installation Guide<a class="headerlink" href="#installation-guide" title="Permalink to this headline">¶</a></h1>
 <p>Running these simple commands will launch the DEBrowser within your local
 machine.</p>
-<p>Before you start;
-First, you will have to install R and/or RStudio.
-(On Fedora/Red Hat/CentOS, these packages have to be installed;
-openssl-devel, libxml2-devel, libcurl-devel, libpng-devel)</p>
-<p>You can install DEBrowser from bioconductor or from the source code. Install the required dependencies by running the following commands in R or RStudio.</p>
+<p>Before you start; you will have to install R and/or RStudio.
+You can install DEBrowser from bioconductor or from the source code. Install the required dependencies by running the following commands in R or RStudio.
+Please check <em>Operating System Dependencies</em> section, in case your operating system requires packages to be installed.</p>
 <p><strong>A.1 Bioconductor Installation</strong> (Recommended):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span><span class="p">(</span><span class="s2">&quot;https://www.bioconductor.org/biocLite.R&quot;</span><span class="p">)</span>
 <span class="n">biocLite</span><span class="p">(</span><span class="s2">&quot;debrowser&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>A.2 Bioconductor Installation - Developerment Version</strong>:</p>
+<p><strong>A.2 Bioconductor Installation - Developer Version</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>if (!requireNamespace(&quot;BiocManager&quot;, quietly=TRUE))
 install.packages(&quot;BiocManager&quot;)
 BiocManager::install(&quot;debrowser&quot;, version = &quot;devel&quot;)
@@ -200,6 +201,17 @@ BiocManager::install(&quot;debrowser&quot;, version = &quot;devel&quot;)
 </div>
 <p>Once you run <code class="docutils literal notranslate"><span class="pre">startDEBrowser()</span></code> shiny will launch a web browser which is ready to use!</p>
 <p>For more information about DEBrowser, please visit our <strong>Quick-start Guide</strong> section within documentation.</p>
+<div class="section" id="operating-system-dependencies">
+<h2>Operating System Dependencies<a class="headerlink" href="#operating-system-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>On Fedora/Red Hat/CentOS, these packages have to be installed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span><span class="o">-</span><span class="n">devel</span><span class="p">,</span> <span class="n">libxml2</span><span class="o">-</span><span class="n">devel</span><span class="p">,</span> <span class="n">libcurl</span><span class="o">-</span><span class="n">devel</span><span class="p">,</span> <span class="n">libpng</span><span class="o">-</span><span class="n">devel</span>
+</pre></div>
+</div>
+<p>On Ubuntu 18.04 LTS, you can install required packages by following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libcurl4</span><span class="o">-</span><span class="n">openssl</span><span class="o">-</span><span class="n">dev</span> <span class="n">libssl</span><span class="o">-</span><span class="n">dev</span> <span class="n">libv8</span><span class="o">-</span><span class="mf">3.14</span><span class="o">-</span><span class="n">dev</span> <span class="n">udunits</span><span class="o">-</span><span class="nb">bin</span> <span class="n">libudunits2</span><span class="o">-*</span> <span class="n">libxml2</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 

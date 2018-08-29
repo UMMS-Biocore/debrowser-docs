@@ -6,19 +6,16 @@ Installation Guide
 Running these simple commands will launch the DEBrowser within your local
 machine.
 
-Before you start;
-First, you will have to install R and/or RStudio.
-(On Fedora/Red Hat/CentOS, these packages have to be installed;
-openssl-devel, libxml2-devel, libcurl-devel, libpng-devel)
-
+Before you start; you will have to install R and/or RStudio.
 You can install DEBrowser from bioconductor or from the source code. Install the required dependencies by running the following commands in R or RStudio. 
+Please check *Operating System Dependencies* section, in case your operating system requires packages to be installed.
 
 **A.1 Bioconductor Installation** (Recommended)::
 
     source("https://www.bioconductor.org/biocLite.R")
     biocLite("debrowser")
 
-**A.2 Bioconductor Installation - Developerment Version**::
+**A.2 Bioconductor Installation - Developer Version**::
     
     if (!requireNamespace("BiocManager", quietly=TRUE))
     install.packages("BiocManager")
@@ -44,3 +41,14 @@ After debrowser installation, you can load and start DEBrowser by following comm
 Once you run ``startDEBrowser()`` shiny will launch a web browser which is ready to use!
 
 For more information about DEBrowser, please visit our **Quick-start Guide** section within documentation.
+
+Operating System Dependencies
+=============================
+
+On Fedora/Red Hat/CentOS, these packages have to be installed::
+    
+    openssl-devel, libxml2-devel, libcurl-devel, libpng-devel
+
+On Ubuntu 18.04 LTS, you can install required packages by following command::
+
+    sudo apt-get install libcurl4-openssl-dev libssl-dev libv8-3.14-dev udunits-bin libudunits2-* libxml2-dev 
