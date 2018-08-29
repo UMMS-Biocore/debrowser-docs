@@ -167,9 +167,15 @@
 <p>Running these simple commands will launch the DEBrowser within your local
 machine.</p>
 <p>Before you start;
-First, you will have to install R and/or RStudio.
-(On Fedora/Red Hat/CentOS, these packages have to be installed;
-openssl-devel, libxml2-devel, libcurl-devel, libpng-devel)</p>
+First, you will have to install R and/or RStudio.</p>
+<p>On Fedora/Red Hat/CentOS, these packages have to be installed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span><span class="o">-</span><span class="n">devel</span><span class="p">,</span> <span class="n">libxml2</span><span class="o">-</span><span class="n">devel</span><span class="p">,</span> <span class="n">libcurl</span><span class="o">-</span><span class="n">devel</span><span class="p">,</span> <span class="n">libpng</span><span class="o">-</span><span class="n">devel</span>
+</pre></div>
+</div>
+<p>On Ubuntu 18.04 LTS, you can install required packages by following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libcurl4</span><span class="o">-</span><span class="n">openssl</span><span class="o">-</span><span class="n">dev</span> <span class="n">libssl</span><span class="o">-</span><span class="n">dev</span> <span class="n">libv8</span><span class="o">-</span><span class="mf">3.14</span><span class="o">-</span><span class="n">dev</span> <span class="n">udunits</span><span class="o">-</span><span class="nb">bin</span> <span class="n">libudunits2</span><span class="o">-*</span> <span class="n">libxml2</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
 <p>You can install DEBrowser from bioconductor or from the source code. Install the required dependencies by running the following commands in R or RStudio.</p>
 <p><strong>A.1 Bioconductor Installation</strong> (Recommended):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span><span class="p">(</span><span class="s2">&quot;https://www.bioconductor.org/biocLite.R&quot;</span><span class="p">)</span>

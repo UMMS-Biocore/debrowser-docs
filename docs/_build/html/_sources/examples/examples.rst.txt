@@ -348,7 +348,7 @@ Log2 fold change comparison for PPARα pathway
     
     .. image:: ../debrowser_pics2/example_fold_selection.png
 	   :align: center
-	   :width: 35%
+	   :width: 30%
        
     It is time to download our dataset by clicking **Download Data** button on the **Data Options** field. You can open downloaded tsv file in Excel or similar programs. Once you open the file, you will see columns of count data, padj and fold2Change for all comparisons. Since we are only interested in fold2Change columns, you can delete the rest. Final data file should look like image on the left at below. 
     
