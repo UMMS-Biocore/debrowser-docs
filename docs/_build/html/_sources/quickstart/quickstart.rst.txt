@@ -185,6 +185,11 @@ The page will load with **Scatter Plot**. You can switch to **Volcano Plot** and
 
 **A.** Scatter plot, **B.** Volcano plot, **C.** MA plot
 
+You can easily track the plotting parameters by checking **Plot Information** box as shown at below. Selected DE parameters, chosen dataset, compared conditions, and normalization method are listed. Additionally, heatmap parameters (scaled, centered, log, pseudo-count) could be simply followed by this info box.
+
+    .. image:: ../debrowser_pics2/plot_information.png
+       :align: center
+
 .. tip::
 
     Please keep in mind that to increase the performance of the generating graph, by default 10% of non-significant(NS) genes are used to generate plots. You might show all NS genes by please click **Main Options** button and change Background Data(%) to 100% on the left sidebar.
