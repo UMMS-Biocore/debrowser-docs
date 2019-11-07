@@ -38,7 +38,7 @@ this `demo set`_. For another example, try our `full dataset (Vernia et. al)`_ .
 The structure of the count data files are shown below:
 
 =====  =====  =====  =====  =====
-gene   exp1   exp2  cont1  cont2
+gene   exp1   exp2   cont1  cont2
 =====  =====  =====  =====  =====
 DQ714  0.00   0.00   0.00   0.00
 DQ554  0.00   0.00   0.00   0.00
