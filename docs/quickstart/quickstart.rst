@@ -37,19 +37,19 @@ this `demo set`_. For another example, try our `full dataset (Vernia et. al)`_ .
 
 The structure of the count data files are shown below:
 
-=====  =====  =====  =====  =====  =====
-gene   trans   exp1   exp2  cont1  cont2
-=====  =====  =====  =====  =====  =====
-DQ714  uc007   0.00   0.00   0.00   0.00
-DQ554  uc008   0.00   0.00   0.00   0.00
-AK028  uc011   2.00   1.29   0.00   0.00
-=====  =====  =====  =====  =====  =====
+=====  =====  =====  =====  =====
+gene   exp1   exp2  cont1  cont2
+=====  =====  =====  =====  =====
+DQ714  0.00   0.00   0.00   0.00
+DQ554  0.00   0.00   0.00   0.00
+AK028  2.00   1.29   0.00   0.00
+=====  =====  =====  =====  =====
 
 .. tip::
 
 	DEBrowser also accepts count data files via hyperlink, for more information please see the `autoload data via hyperlink <quickstart.html#autoload-data-via-hyperlink>`_ section.
 
-In addition to the count data file; you need to upload metadata file to correct for batch effects or any other normalizing conditions you might want to address that might be within your results. To handle for these conditions, simply create a metadata file by using the example table at below or download sample file from `this link <https://bioinfo.umassmed.edu/pub/debrowser/simple_demo_meta.txt>`_.
+In addition to the count data file; you might need to upload metadata file to correct for batch effects or any other normalizing conditions you might want to address that might be within your results. To handle for these conditions, simply create a metadata file by using the example table at below or download sample file from `this link <https://bioinfo.umassmed.edu/pub/debrowser/simple_demo_meta.txt>`_. Metadata file also simplifies condition selection for complex data. The columns you define in this file can be selected in condition selection page. Make sure you have defined two conditions per column. If there are more than two conditions in a column, those can be defined empty. Please note that, if your data is not complex, metadata file is optional, you don't need to upload. 
 
 ============  =====  =========
 sample        batch  condition
