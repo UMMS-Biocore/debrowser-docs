@@ -8,8 +8,9 @@ Please check *Operating System Dependencies* section, in case your operating sys
 
 **A.1 Bioconductor Installation** (Recommended)::
 
-    source("https://www.bioconductor.org/biocLite.R")
-    biocLite("debrowser")
+    if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+    BiocManager::install("debrowser")
 
 **A.2 Bioconductor Installation - Developer Version**::
     
