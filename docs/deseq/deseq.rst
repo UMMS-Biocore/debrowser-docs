@@ -10,7 +10,7 @@ Introduction
 
 Differential gene expression analysis has become an increasingly popular tool in determining and viewing up and/or down experssed genes between two or more sets of samples. The goal of Differential expression analysis is to find genes, transcripts or regions whose difference in expression/count, when accounting for the variance within condition, is higher than expected by chance. DESeq2 is one of the highly used package in R available via Bioconductor and is designed to normalize count data from high-throughput sequencing assays such as RNA-Seq and test for differential expression (Love et al. 2014). For more information on the DESeq2 algorithm, you can read its documentation below;
 
-<https://bioconductor.org/packages/release/bioc/manuals/DESeq2/man/DESeq2.pdf>
+`DESeq2 userguide <https://bioconductor.org/packages/release/bioc/manuals/DESeq2/man/DESeq2.pdf>`_
 
 With multiple parameters such as padjust values, log fold changes, and plot styles, altering plots, created with your DE data can be a hassle as well as time consuming. The DEBrowser uses DESeq2, EdgeR, and Limma coupled with shiny to produce real-time changes within your plot queries and allows for interactive browsing of your DE results. In addition to DE analysis, DEBrowser also offers a variety of other plots and analysis tools to help visualize your data even further.
 
@@ -18,7 +18,7 @@ DESeq2
 =========
 
 For the details please check the user guide.
-`DESeq2 userguide <https://www.bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.pdf>`_
+`DESeq2 userguide <https://bioconductor.org/packages/release/bioc/manuals/DESeq2/man/DESeq2.pdf>`_
 
 DESeq2 performs multiple steps in order to analyze the data you've provided for it.
 The first step is to indicate the condition that each column (experiment) in the table represent.
