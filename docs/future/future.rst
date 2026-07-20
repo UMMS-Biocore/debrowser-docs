@@ -2,12 +2,20 @@
 DEBrowser Additions
 *******************
 
-In the future, we are going to add:
+DEBrowser is under active development. Recent additions include a rebuilt
+`bslib <https://rstudio.github.io/bslib/>`_ interface with a guided Data Prep
+wizard and light/dark theming, a cross-contrast **Concordance** tab, **GSEA**
+(fgsea) enrichment with an NES heatmap, an optional **AI interpretation**
+assistant, **bookmarking**, and reproducibility exports (R script, R Markdown,
+Jupyter notebook, and a methods paragraph).
 
-	* Venn Diagrams to compare overlapping differentially expressed genes in different condition comparison results.
-	
-	* Increase in the number of used clustering methods.
-	
-	* GO term analysis gene lists will be added for found GO categories.
-	
-This page will be updated as new capabilities are added to DEBrowser and/or if we begin new advancements.
+Planned next:
+
+* Venn diagrams to compare overlapping differentially expressed genes across
+  condition comparisons.
+* Additional clustering methods for heatmaps.
+* Expanded gene-set libraries and organisms for enrichment.
+
+This page is updated as new capabilities land. To request a feature or report an
+issue, open a ticket on our
+`GitHub issue tracker <https://github.com/UMMS-Biocore/debrowser/issues>`_.

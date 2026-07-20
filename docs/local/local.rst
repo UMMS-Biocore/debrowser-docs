@@ -2,50 +2,62 @@
 Installation Guide
 ******************
 
-Before you start; you will have to install R and/or RStudio.
-You can install DEBrowser from bioconductor or from the source code. Install the required dependencies by running the following commands in R or RStudio. 
-Please check *Operating System Dependencies* section, in case your operating system requires packages to be installed.
+Before you start, install R and (optionally) RStudio. You can install DEBrowser
+from Bioconductor or from source. See *Operating System Dependencies* below if
+your OS is missing system libraries.
 
-**A.1 Bioconductor Installation** (Recommended)::
+**A.1 Bioconductor (recommended)**::
 
     if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
+        install.packages("BiocManager")
     BiocManager::install("debrowser")
 
-**A.2 Bioconductor Installation - Developer Version**::
-    
-    if (!requireNamespace("BiocManager", quietly=TRUE))
-    install.packages("BiocManager")
+**A.2 Bioconductor — development version**::
+
+    if (!requireNamespace("BiocManager", quietly = TRUE))
+        install.packages("BiocManager")
     BiocManager::install("debrowser", version = "devel")
 
-**B. Installation instructions from source code**::
+**B. From source**::
 
-    install.packages("devtools") ## If you haven't installed devtools, you can easily install it by using this command 
+    install.packages("devtools")   # if not already installed
     library("devtools")
     install_github("UMMS-Biocore/debrowser", build_vignettes = TRUE)
-        
-Alternatively, you can download the source code from `here <https://github.com/UMMS-Biocore/debrowser>`_ as a compressed format. Then you need to decompress and install with following command::
-    
-    R CMD INSTALL debrowser-develop  ##where folder name is debrowser-develop
-    
+
+Alternatively, download the source from
+`GitHub <https://github.com/UMMS-Biocore/debrowser>`_, decompress it, and
+install::
+
+    R CMD INSTALL debrowser-develop   # where the folder is debrowser-develop
+
 -----
 
-After debrowser installation, you can load and start DEBrowser by following commands::
+After installation, load and start DEBrowser::
 
-        library(debrowser)
-        startDEBrowser()
+    library(debrowser)
+    startDEBrowser()
 
-Once you run ``startDEBrowser()`` shiny will launch a web browser which is ready to use!
+``startDEBrowser()`` launches the app in your browser on port ``3838`` (which
+keeps bookmark URLs stable across restarts). Continue with the
+:doc:`Quick-start Guide <../quickstart/quickstart>`.
 
-For more information about DEBrowser, please visit our **Quick-start Guide** section within documentation.
+.. note::
+
+    The optional **AI interpretation** features depend on three additional
+    packages. Install them once if you plan to use AI::
+
+        install.packages(c("ellmer", "whisker", "keyring"))
+
+    DEBrowser works fully without them; AI simply stays unavailable.
 
 Operating System Dependencies
 =============================
 
-On Fedora/Red Hat/CentOS, these packages have to be installed::
-    
-    openssl-devel, libxml2-devel, libcurl-devel, libpng-devel
+On Fedora / Red Hat / CentOS::
 
-On Ubuntu 18.04 LTS, you can install required packages by following command::
+    openssl-devel libxml2-devel libcurl-devel libpng-devel
 
-    sudo apt-get install libcurl4-openssl-dev libssl-dev libv8-3.14-dev udunits-bin libudunits2-* libxml2-dev 
+On Ubuntu / Debian::
+
+    sudo apt-get install libcurl4-openssl-dev libssl-dev \
+        libxml2-dev libudunits2-dev
